@@ -206,6 +206,21 @@ body {
   border: 1px solid rgba(176,131,67,.16);
 }
 
+/* Lien Maps — discret, prend la couleur de la ligne du jour.
+   Présent uniquement sur les créneaux qui sont un lieu réel. */
+.slot-map {
+  display: inline-flex; align-items: center; gap: 5px;
+  margin-top: 9px; padding: 6px 11px 6px 9px;
+  border-radius: 999px; border: 1px solid;
+  font-size: 11px; font-weight: 600; letter-spacing: -.005em;
+  text-decoration: none; background: var(--surface);
+  transition: all .22s var(--ease);
+}
+@media (hover: hover) {
+  .slot-map:hover { background: var(--surface-2); transform: translateY(-1px); box-shadow: var(--sh-1); }
+}
+.slot-map:active { transform: scale(.96); }
+
 /* ═══════════════════════════════════════════════════════════
    PILLS & BADGES
    ═══════════════════════════════════════════════════════════ */
@@ -927,6 +942,7 @@ const DAYS = [{
   }, {
     time: "Soir",
     title: "Maxwell Food Centre ou Lau Pa Sat",
+    map: "Maxwell Food Centre Singapore",
     desc: "Chicken rice, laksa, char kway teow",
     tip: null
   }]
@@ -940,21 +956,25 @@ const DAYS = [{
   slots: [{
     time: "Matin",
     title: "Gardens by the Bay",
+    map: "Gardens by the Bay Singapore",
     desc: "Supertrees, Flower Dome, Cloud Forest",
     tip: null
   }, {
     time: "Déjeuner",
     title: "Chinatown Complex Food Centre",
+    map: "Chinatown Complex Food Centre Singapore",
     desc: "Le plus authentique de la ville",
     tip: null
   }, {
     time: "Après-midi",
     title: "Little India & Haji Lane",
+    map: "Haji Lane Singapore",
     desc: "Temples, street art, cafés branchés",
     tip: null
   }, {
     time: "Soir",
     title: "Garden Rhapsody · Marina Bay · NOVA 🍹",
+    map: "Supertree Grove Gardens by the Bay",
     desc: "Retour aux Supertrees pour le spectacle son & lumière gratuit — 19h45 et 20h45, 15 min, thème \"Christmas Special\" fin décembre · puis promenade Marina Bay illuminée · NOVA — rooftop bar avec vue sur la skyline, premier rooftop du voyage !",
     tip: "→ Arriver 15-20 min avant pour une bonne place sur la pelouse sous les Supertrees"
   }]
@@ -968,26 +988,31 @@ const DAYS = [{
   slots: [{
     time: "Matin",
     title: "Rifle Range Nature Park",
+    map: "Rifle Range Nature Park Singapore",
     desc: "Accès direct depuis Beauty World MRT · Colugo Trail jusqu'au Colugo Deck (31m au-dessus de l'ancienne carrière) · Quarry Wetland pour l'observation d'oiseaux · nature authentique, aucun côté parc à thème",
     tip: "→ Partir tôt pour éviter la chaleur — compter 1h30-2h sur place"
   }, {
     time: "Midi",
     title: "Transit vers Southern Ridges",
+    map: "Henderson Waves Singapore",
     desc: "Beauty World → HarbourFront en MRT (~35 min, 1 changement) · déjeuner rapide en route",
     tip: null
   }, {
     time: "Après-midi",
     title: "Southern Ridges Trail",
+    map: "Henderson Waves Southern Ridges Singapore",
     desc: "Mount Faber → Henderson Waves (le plus haut pont piéton de Singapour) → Forest Walk → HortPark · ~2h de marche dans la canopée, vue sur les détroits · bien plus sauvage et local que Sentosa",
     tip: "→ Si le temps presse, faire la portion Mount Faber → Henderson Waves suffit pour les meilleures vues"
   }, {
     time: "Dès 17h",
     title: "Direction Marina Bay — trouver sa place",
+    map: "Marina Bay Waterfront Promenade Singapore",
     desc: "Se poser tôt sur le Waterfront Promenade avant l'affluence · dîner sur place (food trucks ou dernier repas SG à emporter) · ambiance qui monte crescendo jusqu'au décompte",
     tip: null
   }, {
     time: "Minuit",
     title: "Réveillon Marina Bay 🎆",
+    map: "Marina Bay Waterfront Promenade Singapore",
     desc: "Feu d'artifice au-dessus de la baie, vue sur Marina Bay Sands et les Supertrees illuminés",
     tip: null
   }]
@@ -1001,16 +1026,19 @@ const DAYS = [{
   slots: [{
     time: "08:30",
     title: "⏱️ Départ appartement · direction Changi",
+    map: "Changi Airport Terminal 1 Singapore",
     desc: "Petit-déj rapide · vérifier passeports et bagages · MRT East West Line ou Downtown Line vers Changi Airport · ~35-45 min selon le point de départ · ou Grab (~25 min, ~S$25)",
     tip: "→ Réveillon la veille — prévoir large, le MRT est calme le 1er janvier matin"
   }, {
     time: "09:45",
     title: "✈️ Enregistrement Changi T1 · Scoot D7QYWS",
+    map: "Changi Airport Terminal 1 Singapore",
     desc: "Comptoir Scoot Terminal 1 · 20 kg de soute inclus pour 2 passagers · LCC donc arriver ~2h45 avant · vol 12h30 → 17h05 · ~4h45 de vol",
     tip: "⚠️ Scoot = LCC · enregistrement bagages ferme 60 min avant le départ"
   }, {
     time: "17:05",
     title: "Arrivée TPE Taoyuan T1 · EasyCard + MRT",
+    map: "Taoyuan International Airport Terminal 1",
     desc: "Immigration et bagages ~30 min · acheter l'EasyCard aux distributeurs (dépôt 100 TWD) · MRT Airport Line Express → Taipei Main Station ~36 min",
     tip: "→ Prendre le train violet (Express, 36 min) pas le bleu (Commuter, 50 min)"
   }, {
@@ -1021,16 +1049,19 @@ const DAYS = [{
   }, {
     time: "Fin après-midi",
     title: "Dadaocheng — vieux quartier marchand",
+    map: "Dihua Street Dadaocheng Taipei",
     desc: "Le quartier marchand du XIXe siècle · ruelles de boutiques de thé, épices, tisanes, vintage taïwanais · très photogénique, bien moins touristique que Ximending · à 15 min à pied de l'hôtel",
     tip: "→ Dihua Street est le cœur du quartier — lanternes rouges, façades coloniales, ambiance authentique"
   }, {
     time: "Soir",
     title: "Temple Longshan — Wanhua",
+    map: "Longshan Temple Taipei",
     desc: "Le plus vieux temple de Taipei (1738) · encens, chants, architecture taïwanaise colorée · quartier historique de Wanhua autour",
     tip: "→ Y aller en fin d'après-midi pour la cérémonie du soir — ambiance unique"
   }, {
     time: "Soir (optionnel)",
     title: "Marché nocturne Ningxia ou Raohe",
+    map: "Ningxia Night Market Taipei",
     desc: "Premier marché de nuit taiwanais · scallion pancake, oyster vermicelli, bubble tea · si vous avez encore de l'énergie après le vol !",
     tip: null
   }]
@@ -1044,16 +1075,19 @@ const DAYS = [{
   slots: [{
     time: "Matin",
     title: "Jiufen — village de montagne",
+    map: "Jiufen Old Street Taiwan",
     desc: "Bus depuis Taipei (~1h) · ruelles en escalier, lanternes rouges, maisons de thé perchées · décor qui a inspiré le film Le Voyage de Chihiro de Miyazaki · arriver le matin avant les groupes",
     tip: "→ Café ou salon de thé A-Mei pour la vue sur la baie sous les lanternes"
   }, {
     time: "Après-midi",
     title: "Elephant Mountain (Xiangshan)",
+    map: "Elephant Mountain Xiangshan Taipei",
     desc: "30 min de randonnée depuis le MRT · vue spectaculaire sur Taipei et la Taipei 101 en contrebas · populaire au coucher du soleil",
     tip: null
   }, {
     time: "Soir",
     title: "Ximending · Frank Taipei 🍹",
+    map: "Ximending Taipei",
     desc: "Quartier jeune et branché · street food, friperies, cosplay, néons · puis Frank Taipei (ATT 4 FUN, 13e-14e étage) — balcon face à la Taipei 101, vue imprenable, ambiance lounge avec DJ, cocktails ~NT$400-500",
     tip: "→ Shilin Night Market à 15 min si encore de l'appétit · Frank Taipei idéal après 21h quand la 101 s'illumine"
   }]
@@ -1072,31 +1106,37 @@ const DAYS = [{
   }, {
     time: "09:30",
     title: "Beitou — sources chaudes volcaniques ♨️",
+    map: "Beitou Thermal Valley Taipei",
     desc: "MRT ligne rouge → Xinbeitou · ~30 min · vallée thermale de Beitou, vapeurs sulfureuses, bibliothèque en bois primée · bains publics ~150 TWD",
     tip: "→ Thermal Valley (地熱谷) pour les fumerolles · Millennium Hot Spring pour se baigner (maillot obligatoire)"
   }, {
     time: "12:30",
     title: "Déjeuner + Taipei 101 ou Musée du Palais",
+    map: "Taipei 101",
     desc: "Retour centre ~30 min · soit Taipei 101 (observatoire 89e étage, ~600 TWD) soit le Musée National du Palais (plus grande collection d'art chinois au monde)",
     tip: "→ Din Tai Fung original au sous-sol de Taipei 101 pour les xiaolongbao"
   }, {
     time: "16:00",
     title: "Dernier bubble tea · derniers achats",
+    map: "Zhongshan District Taipei",
     desc: "Ximending ou Zhongshan pour les souvenirs · pineapple cakes (gâteaux à l'ananas) = le souvenir classique de Taiwan",
     tip: null
   }, {
     time: "17:00",
     title: "⏱️ Récupérer bagages · direction TPE",
+    map: "Taoyuan International Airport Terminal 1",
     desc: "Retour hôtel pour les valises · puis MRT Airport Line Express depuis Taipei Main Station → TPE ~36 min · ~160 TWD",
     tip: "→ Astuce : check-in bagages possible directement à Taipei Main Station (in-town check-in) pour certaines compagnies"
   }, {
     time: "18:10",
     title: "✈️ Enregistrement TPE · Peach 7YXBYX",
+    map: "Taoyuan International Airport Terminal 1",
     desc: "Être au comptoir Peach ~2h45 avant · vol 20h55 → 00h50 (+1) · ~3h de vol · LCC donc enregistrement ferme tôt",
     tip: "⚠️ Peach = LCC · comptoir bagages ferme 50 min avant le départ"
   }, {
     time: "00:50 (+1)",
     title: "Arrivée Haneda T3 · taxi vers Akasaka",
+    map: "Haneda Airport Terminal 3 Tokyo",
     desc: "Arrivée après minuit — plus de métro · Uber ou taxi forfait ~¥9 000 pour 2 · check-in tardif hôtel Mystays Akasaka · dodo direct",
     tip: "→ Uber disponible 24h à Haneda T3 · Suica cards le lendemain matin"
   }]
@@ -1110,31 +1150,37 @@ const DAYS = [{
   slots: [{
     time: "Matin",
     title: "Suica Cards + café Akasaka",
+    map: "Akasaka Tokyo",
     desc: "Récupérer les Suica Cards (distributeurs dans le métro ou konbini) · premier café japonais dans le quartier · se repérer",
     tip: "→ Hôtel Mystays Akasaka · métro Akasaka-Mitsuke ligne Ginza ou Marunouchi"
   }, {
     time: "Milieu matin",
     title: "Tsukiji — marché extérieur",
+    map: "Tsukiji Outer Market Tokyo",
     desc: "Tamago yaki, huîtres fraîches, thon — déjeuner de champions · y aller avant 11h pour le meilleur choix · Akasaka → Tsukiji ~20 min métro ligne Hibiya",
     tip: null
   }, {
     time: "Après-midi tôt",
     title: "Asakusa — Senso-ji",
+    map: "Senso-ji Temple Asakusa Tokyo",
     desc: "Plus vieux temple de Tokyo · rue Nakamise · ambiance vieux Tokyo — contraste saisissant · Tsukiji → Asakusa ~20 min métro",
     tip: null
   }, {
     time: "Après-midi",
     title: "teamLab Borderless — Azabudai Hills 🎨",
+    map: "teamLab Borderless Azabudai Hills Tokyo",
     desc: "75+ œuvres d'art numérique immersives et interconnectées · lumières, miroirs, projections qui réagissent à ta présence · explorer librement · compter 2-3h · Asakusa → Azabudai Hills ~30 min métro",
     tip: "→ ~¥3 800 / pers · 7 min à pied depuis métro Azabu-Juban · réserver sur teamlab.art"
   }, {
     time: "Soirée",
     title: "Mori Art Museum + Tokyo City View — Roppongi Hills 🌃",
+    map: "Mori Art Museum Roppongi Hills Tokyo",
     desc: "53e étage de Roppongi Hills · expo art contemporain + vue panoramique à 360° sur Tokyo de nuit · ouvert jusqu'à 22h · à 10 min à pied de teamLab via Roppongi · Museum Café \"The Sun & The Moon\" avec vue si vous avez faim",
     tip: "→ ~¥2 000 / pers · à pied depuis Azabudai Hills via Roppongi · check l'expo en cours sur mori.art.museum"
   }, {
     time: "Nuit",
     title: "New York Bar · Golden Gai — Shinjuku 🍹",
+    map: "New York Bar Park Hyatt Tokyo",
     desc: "New York Bar (Park Hyatt Tokyo, 52e étage) — vue panoramique sur Tokyo de nuit, jazz live, rendu célèbre par Lost in Translation · cocktails ~¥2 500 · Roppongi → Shinjuku ~15 min métro · puis Golden Gai à 10 min à pied — 200 micro-bars thématiques",
     tip: "→ Arriver avant 21h pour avoir une table avec vue · cover charge ~¥2 200 après 20h"
   }]
@@ -1153,16 +1199,19 @@ const DAYS = [{
   }, {
     time: "09:30",
     title: "Nakameguro — canal & cafés",
+    map: "Nakameguro Canal Tokyo",
     desc: "Le canal le plus photogénique de Tokyo · boutiques vintage, cafés indé, galeries · ambiance slow et branchée · Akasaka → Nakameguro ~20 min métro",
     tip: "→ Log Road Daikanyama à 5 min à pied — terrasse face au canal parfaite pour un café matinal"
   }, {
     time: "Milieu matin",
     title: "Cé La Vi · Shibuya Crossing 🍹",
+    map: "Shibuya Crossing Tokyo",
     desc: "Cé La Vi Tokyo (Shibuya Fukuras, 17e étage) — vue sur le Crossing d'en haut · café ou verre · puis descendre traverser le Crossing · Nonbei Yokocho dans les ruelles · Nakameguro → Shibuya ~5 min à pied ou 1 arrêt",
     tip: "→ Cocktails à partir de ~¥1 800 · ouvert dès 11h"
   }, {
     time: "Déjeuner",
     title: "Shimokitazawa",
+    map: "Shimokitazawa Tokyo",
     desc: "15 min depuis Shibuya (ligne Tokyu Den-en-toshi) · disquaires, friperies vintage, cafés indé · Disk Union pour les vinyles · Village Vanguard pour les trucs improbables · ramen ou curry avant de partir",
     tip: null
   }, {
@@ -1173,16 +1222,19 @@ const DAYS = [{
   }, {
     time: "16:00",
     title: "⏱️ Akasaka → Shinjuku Station · ~20 min",
+    map: "Shinjuku Station Odakyu Line Tokyo",
     desc: "Métro Marunouchi ou Oedo · prévoir 15 min de marge pour trouver le quai Odakyu (niveau -1, côté ouest de Shinjuku Station — la gare est immense)",
     tip: "→ Shinjuku Station = la gare la plus fréquentée au monde · compter large pour la navigation interne"
   }, {
     time: "17:00",
     title: "🚃 Romancecar Shinjuku → Hakone-Yumoto · 85 min",
+    map: "Shinjuku Station Odakyu Line Tokyo",
     desc: "Siège réservé · train panoramique · arrivée Hakone-Yumoto ~18h25 · puis Hakone Tozan Train → Gora ~40 min",
     tip: null
   }, {
     time: "19:30",
     title: "Check-in ryokan Gora · premier onsen",
+    map: "Gora Station Hakone",
     desc: "Dîner kaiseki si réservé · sinon restaurants autour de Gora Station",
     tip: null
   }]
@@ -1196,11 +1248,13 @@ const DAYS = [{
   slots: [{
     time: "Matin",
     title: "Owakudani — zone volcanique",
+    map: "Owakudani Hakone",
     desc: "Téléphérique · fumerolles · œufs noirs · vue Fuji si ciel dégagé",
     tip: "→ Janvier = meilleure saison pour voir le Fuji"
   }, {
     time: "Après-midi",
     title: "Lac Ashi — bateau pirate",
+    map: "Lake Ashi Moto-Hakone Port",
     desc: "Traversée jusqu'à Moto-Hakone · torii dans le lac avec le Fuji en fond · sanctuaire Hakone-Jinja au bord de l'eau",
     tip: null
   }, {
@@ -1224,26 +1278,31 @@ const DAYS = [{
   }, {
     time: "09:30",
     title: "⏱️ Check-out · Gora → Odawara · ~50 min",
+    map: "Odawara Station",
     desc: "Hakone Tozan Train Gora → Hakone-Yumoto (~40 min, train de montagne à crémaillère) puis → Odawara (~15 min) · couvert Hakone Free Pass",
     tip: "→ Le Tozan est lent et sinueux · ne pas sous-estimer les 50 min"
   }, {
     time: "10:45",
     title: "🚄 Odawara → Nagano · Shinkansen · ~1h40",
+    map: "Odawara Station",
     desc: "Via Tokyo Station (changement Tokaido → Hokuriku Shinkansen Asama) · ~¥7 000/pers billet unitaire · prévoir 15 min de correspondance à Tokyo",
     tip: "→ Acheter les billets la veille au guichet JR pour éviter la queue du matin"
   }, {
     time: "12:30",
     title: "Déjeuner Nagano · soba + Zenko-ji si le temps",
+    map: "Zenko-ji Temple Nagano",
     desc: "Nagano est réputée pour ses soba · le temple Zenko-ji est à 20 min à pied ou 10 min en bus de la gare",
     tip: "→ Zenko-ji peut aussi se faire demain matin — pas de stress si le train a du retard"
   }, {
     time: "14:30",
     title: "🚃 Nagano → Yudanaka · Nagaden · ~45 min",
+    map: "Yudanaka Station Nagano",
     desc: "Quai séparé côté est de Nagano Station (Nagano Electric Railway, non JR) · ~¥1 240 · Snow Monkey Express si horaire coïncide",
     tip: "→ Le quai Nagaden est en sous-sol, fléchage discret · prévoir 10 min pour le trouver"
   }, {
     time: "15:30",
     title: "Check-in Hotel Omodaka · clé des 9 bains",
+    map: "Hotel Omodaka Yudanaka",
     desc: "Navette depuis la gare si demandée à l'avance · réception remet la clé des 9 soto-yu de Shibu Onsen",
     tip: null
   }]
@@ -1257,16 +1316,19 @@ const DAYS = [{
   slots: [{
     time: "Matin",
     title: "Temple Zenko-ji — Nagano",
+    map: "Zenko-ji Temple Nagano",
     desc: "Couloir souterrain obscur (kaidan-meguri) · envoûtant sous la neige",
     tip: null
   }, {
     time: "Après-midi",
     title: "Arrivée Yudanaka · check-in ryokan",
+    map: "Shibu Onsen Yamanouchi Nagano",
     desc: "Clé des 9 bains du village remise par le ryokan",
     tip: null
   }, {
     time: "Soir",
     title: "Circuit Kyu-to-meguri — 9 bains publics",
+    map: "Shibu Onsen Yamanouchi Nagano",
     desc: "Enchaîner les 9 petits bains du village · propriétés différentes pour chacun",
     tip: "→ Finir par le kashikiri privatif du ryokan — tatouages OK"
   }]
@@ -1285,41 +1347,49 @@ const DAYS = [{
   }, {
     time: "08:30",
     title: "🐒 Jigokudani Monkey Park — à l'ouverture",
+    map: "Jigokudani Monkey Park Yamanouchi",
     desc: "Bus/navette depuis Yudanaka (~10 min) puis 35 min de marche en forêt enneigée · les macaques se baignent surtout le matin quand il fait froid",
     tip: "→ Crampons ou chaussures imperméables obligatoires — sentier glacé et en pente"
   }, {
     time: "10:15",
     title: "⏱️ Retour Yudanaka · récupérer les bagages",
+    map: "Yudanaka Station Nagano",
     desc: "35 min de marche retour + navette · être à la gare de Yudanaka pour 11h maximum",
     tip: "→ Si le timing dérape, sauter le retour au ryokan : prendre les bagages avant les singes"
   }, {
     time: "11:00",
     title: "🚃 Yudanaka → Nagano · Nagaden · ~45 min",
+    map: "Nagano Station",
     desc: "~¥1 240 · arrivée Nagano ~11h45 · transfert vers le quai Shinkansen (~10 min de marche interne)",
     tip: null
   }, {
     time: "12:15",
     title: "🚄 Nagano → Tokyo Station · Shinkansen · ~1h30",
+    map: "Tokyo Station",
     desc: "Hokuriku Shinkansen · ~¥8 500/pers · arrivée Tokyo ~13h45 · déjeuner ekiben acheté en gare à bord",
     tip: "→ Acheter un ekiben à Nagano Station — spécialité locale, se mange dans le train"
   }, {
     time: "14:00",
     title: "⏱️ Tokyo Station → Haneda HND · ~35 min",
+    map: "Haneda Airport Terminal 3 Tokyo",
     desc: "JR Yamanote → Hamamatsucho puis Tokyo Monorail → HND T3 · ~¥700 · ou Keikyu direct depuis Shinagawa",
     tip: "→ Heure creuse, mais prévoir large avec les valises"
   }, {
     time: "15:20",
     title: "✈️ Enregistrement Haneda T3 · Peach RENJ7D",
+    map: "Haneda Airport Terminal 3 Tokyo",
     desc: "Être au comptoir à 15h20 impérativement — Peach est un LCC, l'enregistrement bagages ferme tôt · vol 16h50 → 18h40",
     tip: "⚠️ LCC = comptoir fermé 50 min avant · pas de tolérance"
   }, {
     time: "18:40",
     title: "Arrivée CTS Sapporo · JR Rapid → Shin-Sapporo · ~28 min",
+    map: "New Chitose Airport Hokkaido",
     desc: "Le JR Rapid Airport s'arrête à Shin-Sapporo — l'hôtel Emisia est juste à côté, pas besoin de repasser par Sapporo Station 💡",
     tip: null
   }, {
     time: "20:30",
     title: "Ganso Sapporo Ramen Yokocho",
+    map: "Ganso Sapporo Ramen Yokocho Susukino",
     desc: "Ramen miso épais dans la ruelle fumante de Susukino par -10°C · 15 min en métro depuis Shin-Sapporo",
     tip: "→ Si trop fatigués, il y a aussi d'excellents ramen autour de Shin-Sapporo"
   }]
@@ -1333,16 +1403,19 @@ const DAYS = [{
   slots: [{
     time: "Matin",
     title: "Marché Nijo — petit-déj de la mer",
+    map: "Nijo Market Sapporo",
     desc: "Oursins, crabes royaux, saumon — gastronomie marine d'Hokkaido",
     tip: null
   }, {
     time: "Après-midi",
     title: "Parc Odori & vieille ville",
+    map: "Odori Park Sapporo",
     desc: "Sculptures de glace · Tour de l'Horloge · architecture Meiji",
     tip: null
   }, {
     time: "Soir",
     title: "Mont Moiwa — vue nocturne",
+    map: "Mount Moiwa Ropeway Sapporo",
     desc: "Téléphérique + télésiège · Sapporo illuminée classée parmi les plus beaux panoramas nocturnes du Japon",
     tip: null
   }]
@@ -1356,16 +1429,19 @@ const DAYS = [{
   slots: [{
     time: "Matin",
     title: "Canal d'Otaru",
+    map: "Otaru Canal Hokkaido",
     desc: "Entrepôts en brique sous la neige · lumière rasante du matin = photo parfaite",
     tip: null
   }, {
     time: "Après-midi",
     title: "Kitaichi Glass & rue Sakaimachi",
+    map: "Kitaichi Glass Sakaimachi Street Otaru",
     desc: "Ateliers de soufflage de verre · chocolatiers Hokkaido",
     tip: null
   }, {
     time: "Soir",
     title: "Illuminations du canal",
+    map: "Otaru Canal Hokkaido",
     desc: "Lanternes de neige et reflets sur l'eau gelée",
     tip: null
   }]
@@ -1379,11 +1455,13 @@ const DAYS = [{
   slots: [{
     time: "Matin",
     title: "Jigokudani — vallée de l'enfer",
+    map: "Noboribetsu Jigokudani Hell Valley",
     desc: "Zone géothermique · fumerolles · mares bouillonnantes colorées à -5°C",
     tip: null
   }, {
     time: "Après-midi",
     title: "Dai-ichi Takimotokan onsen",
+    map: "Dai-ichi Takimotokan Noboribetsu",
     desc: "30+ types de bains · tatouages acceptés · rotenburo extérieur",
     tip: null
   }]
@@ -1402,31 +1480,37 @@ const DAYS = [{
   }, {
     time: "09:30",
     title: "♨️ Hoheikyo Onsen · bus ~40 min",
+    map: "Hoheikyo Onsen Sapporo",
     desc: "Rotenburo dans les gorges enneigées · tatouages acceptés partout, vérifié · bain à -10°C dehors, vapeur et neige · prévoir 1h30 sur place",
     tip: "→ Restaurant curry indien sur place, étonnamment excellent"
   }, {
     time: "12:30",
     title: "Retour Sapporo · Beer Museum + déjeuner",
+    map: "Sapporo Beer Museum",
     desc: "Brasserie historique de 1876 · visite + dégustation · ou soup curry pour un dernier repas Hokkaido",
     tip: null
   }, {
     time: "15:00",
     title: "⏱️ Récupérer bagages · Shin-Sapporo → CTS · ~28 min",
+    map: "New Chitose Airport Hokkaido",
     desc: "JR Rapid Airport depuis Shin-Sapporo · ~¥1 200 · viser l'aéroport pour 16h15",
     tip: "→ Trains toutes les 15 min · le Rapid Airport est direct"
   }, {
     time: "16:15",
     title: "✈️ Enregistrement CTS · Jetstar GK156",
+    map: "New Chitose Airport Hokkaido",
     desc: "LCC — comptoir bagages ferme tôt · vol 17h50 → 20h20 · A320 · 2h30 de vol",
     tip: "⚠️ Jetstar = LCC · enregistrement fermé 45-50 min avant le départ"
   }, {
     time: "20:20",
     title: "Arrivée KIX T1 · Haruka Express → Kyoto",
+    map: "Kansai International Airport Terminal 1",
     desc: "Récupération bagages ~20h50 · Haruka départs ~21h00 / 21h30 · dernier à 22h16 ✅ · ~75 min · ~¥3 600",
     tip: "→ Marge confortable même si le vol a 30 min de retard"
   }, {
     time: "22:15-22:45",
     title: "Arrivée Kyoto Station · check-in Intergate",
+    map: "Hotel Intergate Kyoto Shijo Shinmachi",
     desc: "Métro Karasuma 2 arrêts ou taxi (~¥1 200) vers l'hôtel Shijo Shinmachi · check-in tardif confirmé",
     tip: "→ Konbini pour un repas léger si les restos sont fermés"
   }]
@@ -1440,16 +1524,19 @@ const DAYS = [{
   slots: [{
     time: "Tôt matin",
     title: "Fushimi Inari — avant 8h",
+    map: "Fushimi Inari Taisha Kyoto",
     desc: "10 000 torii rouges · monter au sommet (2h A/R) · presque désert à l'aube",
     tip: "→ À 6h : personne. À 9h : bondé."
   }, {
     time: "Après-midi",
     title: "Marché Nishiki · Bambouseraie Arashiyama",
+    map: "Nishiki Market Kyoto",
     desc: "600m de stands · tofu, tsukemono · puis forêt de bambous ouverte 24h/24 · pont Togetsu-kyo",
     tip: null
   }, {
     time: "Soir",
     title: "Gion · K36 Rooftop Bar 🍹",
+    map: "Gion Hanamikoji Kyoto",
     desc: "Hanamikoji dès 18h · chance de croiser une geisha · dîner izakaya dans le quartier · puis K36 (Hotel Seiryu Kiyomizu, 4e étage) — vue sur les toits d'Higashiyama et la pagode Yasaka, cocktails ~¥1 500, ambiance intime",
     tip: "→ Meilleur au coucher du soleil ou juste après · ouverture weather-dependent · 5 min à pied depuis Gion"
   }]
@@ -1468,36 +1555,43 @@ const DAYS = [{
   }, {
     time: "08:45",
     title: "Kinkaku-ji — Pavillon d'Or",
+    map: "Kinkaku-ji Kyoto",
     desc: "Bus 205 depuis Kyoto Station ~40 min · temple doré reflété dans l'étang · encore plus beau sous le givre de janvier · ouvre à 9h",
     tip: "→ Y être à l'ouverture · à 10h30 c'est déjà plein"
   }, {
     time: "10:30",
     title: "Château Nijo-jo · ~20 min depuis Kinkaku-ji",
+    map: "Nijo Castle Kyoto",
     desc: "Bus 12 ou métro · planchers rossignols qui grincent · anciens palais des shoguns Tokugawa · jardins en hiver",
     tip: null
   }, {
     time: "12:30",
     title: "⏱️ Récupérer les bagages · Kyoto Station",
+    map: "Kyoto Station",
     desc: "Retour hôtel ou consigne · direction gare · déjeuner rapide dans le complexe Kyoto Station (excellent choix de restos)",
     tip: null
   }, {
     time: "13:30",
     title: "🚃 Kyoto → Nara · Kintetsu · ~35 min",
+    map: "Kintetsu Nara Station",
     desc: "Kintetsu Railway (non JR) ~¥760 · quai Kintetsu de Kyoto Station · arrivée Kintetsu-Nara en plein centre, 5 min à pied du parc aux cerfs",
     tip: "→ Kintetsu arrive plus près du parc que la ligne JR"
   }, {
     time: "14:15",
     title: "🦌 Nara — cerfs & Todai-ji",
+    map: "Todai-ji Nara Park",
     desc: "1 200 cerfs sika en liberté · biscuits shika-senbei ~¥200 · Todai-ji et le grand Bouddha en bronze (le plus grand du Japon) · prévoir 2h30",
     tip: "→ Todai-ji ferme à 17h en hiver · y aller en premier si serré"
   }, {
     time: "17:00",
     title: "🚃 Nara → Osaka-Namba · Kintetsu · ~40 min",
+    map: "Osaka Namba Station",
     desc: "~¥680 · arrivée Namba directement · puis métro Sakaisuji via Nippombashi → Kitahama ~10 min · check-in Brighton City",
     tip: null
   }, {
     time: "19:00",
     title: "Dotonbori by night 🍜",
+    map: "Dotonbori Osaka",
     desc: "Kitahama → Namba ~8 min métro · néons Glico Man · takoyaki, okonomiyaki, kushikatsu · canal illuminé",
     tip: null
   }]
@@ -1511,21 +1605,25 @@ const DAYS = [{
   slots: [{
     time: "Matin",
     title: "Château d'Osaka",
+    map: "Osaka Castle",
     desc: "Y aller tôt · vue depuis le donjon",
     tip: null
   }, {
     time: "Déjeuner",
     title: "Marché Kuromon Ichiba",
+    map: "Kuromon Ichiba Market Osaka",
     desc: "Fruits de mer, wagyu, huîtres à manger sur place",
     tip: null
   }, {
     time: "Après-midi",
     title: "Shinsekai",
+    map: "Shinsekai Tsutenkaku Osaka",
     desc: "Quartier rétro 1920 · Tour Tsutenkaku · kushikatsu",
     tip: null
   }, {
     time: "Soir",
     title: "Dotonbori by night · Crudo Deck 🍹🎉",
+    map: "Dotonbori Osaka",
     desc: "Canal Dotonbori, néons, grand repas de clôture · puis Crudo Deck (Centara Grand Hotel, 33e étage) — 135m au-dessus de Namba, vue panoramique sur Osaka illuminée, cocktails signature, terrasse open-air · dernier verre du voyage en beauté",
     tip: "→ ~¥3 000-5 000 / pers · 2 Chome-11-50 Nanbanaka, Naniwa · au cœur de Namba"
   }]
@@ -1544,31 +1642,37 @@ const DAYS = [{
   }, {
     time: "09:30",
     title: "Shinsaibashi & Amerikamura — derniers achats",
+    map: "Shinsaibashi Osaka",
     desc: "Kitahama → Shinsaibashi ~6 min métro · Don Quijote pour les snacks et souvenirs · cosmétiques japonais · friperies à Amerikamura",
     tip: "→ Tax-free au-dessus de ¥5 000 avec le passeport"
   }, {
     time: "12:30",
     title: "Dernier repas · Kuromon Ichiba ou Dotonbori",
+    map: "Kuromon Ichiba Market Osaka",
     desc: "Marché Kuromon pour les fruits de mer, wagyu, huîtres · dernier takoyaki à Dotonbori",
     tip: null
   }, {
     time: "15:00",
     title: "⏱️ Récupérer bagages · Kitahama → Nankai Namba",
+    map: "Nankai Namba Station Osaka",
     desc: "Métro Sakaisuji Kitahama → Nippombashi (4 min) puis ~8 min à pied jusqu'à Nankai Namba Station",
     tip: "→ Nippombashi et Namba sont reliés par un long couloir souterrain — suivre les panneaux Nankai"
   }, {
     time: "15:45",
     title: "🚃 Nankai Namba → KIX · ~45 min",
+    map: "Kansai International Airport Terminal 1",
     desc: "Airport Express ~¥1 430 · ou Rapi:t (38 min, ~¥1 970) · ⚠️ Non JR, billet séparé au guichet Nankai",
     tip: null
   }, {
     time: "16:30",
     title: "✈️ Enregistrement KIX T1 · Peach PUGXNK",
+    map: "Kansai International Airport Terminal 1",
     desc: "LCC — être au comptoir à 16h30 · vol 18h40 → 00h55 (+1) · ~7h de vol",
     tip: "⚠️ Peach = LCC · comptoir bagages ferme 50 min avant"
   }, {
     time: "00:55 (+1)",
     title: "Arrivée SIN Changi · 18 jan",
+    map: "Changi Airport Singapore",
     desc: "Arrivée dans la nuit · retour à la maison · vol France de ton pote plus tard dans la journée",
     tip: null
   }]
@@ -1981,6 +2085,24 @@ function ProgramTab() {
           /*#__PURE__*/React.createElement("div", { className: "slot-time" }, s.time),
           /*#__PURE__*/React.createElement("div", { className: "slot-title" }, s.title),
           s.desc && /*#__PURE__*/React.createElement("div", { className: "slot-desc" }, s.desc),
+          s.map && /*#__PURE__*/React.createElement("a", {
+            href: "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(s.map),
+            target: "_blank",
+            rel: "noopener noreferrer",
+            className: "slot-map",
+            onClick: e => e.stopPropagation(),
+            style: { borderColor: color + "2E", color: color }
+          },
+            /*#__PURE__*/React.createElement("svg", {
+              width: 11, height: 11, viewBox: "0 0 24 24", fill: "none",
+              stroke: "currentColor", strokeWidth: 2.2, strokeLinecap: "round", strokeLinejoin: "round",
+              style: { flexShrink: 0 }
+            },
+              /*#__PURE__*/React.createElement("path", { d: "M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" }),
+              /*#__PURE__*/React.createElement("circle", { cx: 12, cy: 10, r: 3 })
+            ),
+            /*#__PURE__*/React.createElement("span", null, "Itinéraire")
+          ),
           s.tip && /*#__PURE__*/React.createElement("div", { className: "slot-tip" }, s.tip)
         ))
       )
