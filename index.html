@@ -1199,7 +1199,8 @@ const THEMES = {
     paper: "#F6F5F1",
     card: "#FFFFFF",
     line: "#E4E1D8",
-    sub: "#6B7280"
+    sub: "#6B7280",
+    navBg: "rgba(255,255,255,.94)"
   },
   dark: {
     ink: "#14213D",
@@ -1207,7 +1208,8 @@ const THEMES = {
     paper: "#0E1420",
     card: "#1A2232",
     line: "#2A3348",
-    sub: "#8B93A6"
+    sub: "#8B93A6",
+    navBg: "rgba(26,34,50,.92)"
   }
 };
 const S = { ...THEMES.light };
@@ -2145,7 +2147,7 @@ function TripCompanion() {
       right: 0,
       maxWidth: 480,
       margin: "0 auto",
-      background: "rgba(255,255,255,.94)",
+      background: S.navBg,
       backdropFilter: "blur(12px)",
       borderTop: "1px solid " + S.line,
       display: "flex",
