@@ -2044,26 +2044,7 @@ function TripCompanion() {
       top: 0,
       zIndex: 50
     }
-  }, /*#__PURE__*/React.createElement("button", {
-    onClick: toggleTheme,
-    "aria-label": theme === "dark" ? "Passer en mode clair" : "Passer en mode sombre",
-    style: {
-      position: "absolute",
-      top: 14,
-      right: 16,
-      width: 30,
-      height: 30,
-      borderRadius: "50%",
-      border: "1.5px solid rgba(255,255,255,0.3)",
-      background: "rgba(255,255,255,0.08)",
-      color: "#fff",
-      fontSize: 14,
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      cursor: "pointer"
-    }
-  }, theme === "dark" ? "☀️" : "🌙"), /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       justifyContent: "space-between",
@@ -2083,7 +2064,13 @@ function TripCompanion() {
       marginTop: 3,
       fontVariantNumeric: "tabular-nums"
     }
-  }, "29 déc 2026 → 18 jan 2027 · 2 voyageurs")), isLive ? /*#__PURE__*/React.createElement("div", {
+  }, "29 déc 2026 → 18 jan 2027 · 2 voyageurs")), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      alignItems: "flex-start",
+      gap: 10
+    }
+  }, isLive ? /*#__PURE__*/React.createElement("div", {
     style: {
       textAlign: "right"
     }
@@ -2119,7 +2106,24 @@ function TripCompanion() {
       letterSpacing: 1,
       textTransform: "uppercase"
     }
-  }, "avant décollage"))), /*#__PURE__*/React.createElement("div", {
+  }, "avant décollage")), /*#__PURE__*/React.createElement("button", {
+    onClick: toggleTheme,
+    "aria-label": theme === "dark" ? "Passer en mode clair" : "Passer en mode sombre",
+    style: {
+      flexShrink: 0,
+      width: 28,
+      height: 28,
+      borderRadius: "50%",
+      border: "1.5px solid rgba(255,255,255,0.3)",
+      background: "rgba(255,255,255,0.08)",
+      color: "#fff",
+      fontSize: 13,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      cursor: "pointer"
+    }
+  }, theme === "dark" ? "☀️" : "🌙")))), /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       gap: 4,
