@@ -368,7 +368,7 @@ const STAGES = [{
   hotel: "Chez Nathan 🏠",
   address: null,
   mapQuery: null,
-  notes: ["J5, MacRitchie TreeTop Walk, partir avant 9h", "J5 soir, resto à réserver tôt", "J4 soir, NOVA rooftop, premier bar du voyage 🍹", "J7, Réveillon Marina Bay, arriver 21h"]
+  notes: ["J5, MacRitchie TreeTop Walk, partir avant 9h", "J3 soir, resto à réserver tôt (idée côté Sentosa)", "J4 soir, NOVA rooftop, premier bar du voyage 🍹", "J7, Réveillon Marina Bay, arriver 21h"]
 }, {
   code: "TPE",
   city: "Taipei",
@@ -577,24 +577,24 @@ const DAYS = [{
   num: "J3",
   iso: "2026-12-27",
   city: "SIN",
-  title: "Sentosa en mode balade · Katong",
+  title: "Katong · Sentosa en mode balade",
   dateLabel: "27 déc",
   transports: [],
   slots: [{
     time: "Matin",
-    title: "Sentosa à pied",
-    desc: "Cable car depuis Mount Faber ou HarbourFront, puis balade tranquille, Fort Siloso Skywalk, Palawan Beach, sans s'attarder sur les attractions payantes",
-    tip: "→ Compter 2-3h, pas besoin d'y passer la journée"
-  }, {
-    time: "Après-midi",
     title: "Katong / Joo Chiat",
     desc: "Quartier peranakan, façades colorées, boutiques de tuiles, cafés, petites rues à arpenter tranquillement",
     tip: null
   }, {
+    time: "Après-midi",
+    title: "Sentosa à pied",
+    desc: "Cable car depuis Mount Faber ou HarbourFront, puis balade tranquille, Fort Siloso Skywalk, Palawan Beach, sans s'attarder sur les attractions payantes",
+    tip: "→ Compter 2-3h, pas besoin d'y passer la journée"
+  }, {
     time: "Soir",
-    title: "Dîner tranquille",
-    desc: "Retour côté Changi/Tampines ou East Coast, hawker ou resto de quartier",
-    tip: null
+    title: "Restaurant",
+    desc: "À confirmer selon dispo",
+    tip: "→ Réserver dès maintenant, les bonnes tables partent des semaines à l'avance sur la période de Noël"
   }]
 }, {
   num: "J4",
@@ -648,9 +648,9 @@ const DAYS = [{
     tip: null
   }, {
     time: "Soir",
-    title: "Restaurant",
-    desc: "À confirmer selon dispo",
-    tip: "→ Réserver dès maintenant, les bonnes tables partent des semaines à l'avance sur la période de Noël"
+    title: "Dîner tranquille",
+    desc: "Hawker ou resto de quartier près de Nathan",
+    tip: null
   }]
 }, {
   num: "J6",
@@ -2066,7 +2066,7 @@ function TripCompanion() {
       marginTop: 3,
       fontVariantNumeric: "tabular-nums"
     }
-  }, "29 déc 2026 → 18 jan 2027 · 2 voyageurs")), /*#__PURE__*/React.createElement("div", {
+  }, "25 déc 2026 → 18 jan 2027 · 2 voyageurs")), /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       alignItems: "flex-start",
