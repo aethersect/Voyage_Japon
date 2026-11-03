@@ -730,7 +730,7 @@ const STAGES = [{
   address: "Atsubetsu-ku, Sapporo (à côté de Shin-Sapporo Station)",
   mapQuery: "Hotel Emisia Sapporo",
   booking: "5★ · 469 SGD · annulable avant 2 jan",
-  notes: ["💡 JR Rapid Airport s'arrête à Shin-Sapporo — pas besoin de repasser par Sapporo Station depuis CTS", "Otaru + Noboribetsu : billets JR Hokkaido sur place", "Hoheikyo Onsen — tattoo OK partout, bus 40 min", "ℹ️ Snow Festival (4-11 fév) et lanternes d'Otaru (février) hors saison — mais White Illumination au parc Odori tout votre séjour", "Brasserie Sapporo : à caser le 10 ou le 12, pas le 13 (jour de vol)"]
+  notes: ["💡 JR Rapid Airport s'arrête à Shin-Sapporo — pas besoin de repasser par Sapporo Station depuis CTS", "Otaru + Noboribetsu : billets JR Hokkaido sur place", "Hoheikyo Onsen — tattoo OK partout, bus 40 min", "ℹ️ Snow Festival (4-11 fév) et lanternes d'Otaru (février) hors saison — mais White Illumination au parc Odori tout votre séjour", "Brasserie Sapporo + jingisukan au Beer Garden : le 10 à 11h (le musée n'ouvre pas avant)"]
 }, {
   code: "KYO",
   city: "Kyoto",
@@ -1418,33 +1418,51 @@ const DAYS = [{
   num: "J13",
   iso: "2027-01-10",
   city: "SPK",
-  title: "Marché Nijo · Parc Odori · Mont Moiwa",
+  title: "Marché Nijo · Brasserie Sapporo · Odori · Mont Moiwa",
   dateLabel: "10 jan",
   transports: [],
   slots: [{
-    time: "Matin",
+    time: "08:00",
     title: "Marché Nijo — petit-déj de la mer",
     map: "Nijo Market Sapporo",
-    desc: "Oursins, crabes royaux, saumon — gastronomie marine d'Hokkaido",
-    tip: null
+    desc: "Oursins, crabes royaux, saumon, ikura · kaisendon (bol de sashimi sur riz) au petit-déjeuner · à 10 min à pied d'Odori",
+    tip: "→ Les étals ouvrent dès 7h, c'est le meilleur moment"
   }, {
-    time: "Après-midi",
+    time: "10:30",
+    title: "⏱️ Nijo → Sapporo Beer Museum · ~25 min",
+    map: "Sapporo Beer Museum",
+    desc: "Bus Factory Line [Loop 88] depuis Sapporo Eki-mae, ou métro Toho jusqu'à Higashi-Kuyakusho-Mae puis 10 min à pied",
+    tip: "→ Le musée n'ouvre qu'à 11h — inutile d'arriver avant"
+  }, {
+    time: "11:00",
+    title: "Musée de la bière Sapporo 🍺",
+    map: "Sapporo Beer Museum",
+    desc: "Brasserie de 1876 en brique rouge, seul musée de la bière du Japon · visite libre ~30 min (¥1 000) ou visite guidée 55 min avec dégustation (¥2 000, pas le lundi) · au Tasting Hall : Kuro Label ¥450, Classic exclusive Hokkaido ¥450, set de 3 bières ¥1 200",
+    tip: "→ La Sapporo Classic ne se vend qu'à Hokkaido — c'est celle à goûter"
+  }, {
+    time: "12:30",
+    title: "Déjeuner jingisukan — Beer Garden",
+    map: "Sapporo Beer Garden",
+    desc: "Juste à côté du musée · agneau grillé sur plaque bombée avec légumes, la spécialité de Hokkaido · formules à volonté 100 min · salle Kessel House sous les cuves de brassage d'origine",
+    tip: "→ Réservation conseillée le week-end · l'odeur imprègne les vêtements, prévoir une veste lavable"
+  }, {
+    time: "14:30",
     title: "Parc Odori & vieille ville",
     map: "Odori Park Sapporo",
-    desc: "Tour de l'Horloge · ancienne préfecture en brique rouge · architecture Meiji · parc enneigé",
-    tip: "ℹ️ Pas de sculptures de neige en janvier — le Sapporo Snow Festival a lieu du 4 au 11 février 2027. En revanche la White Illumination couvre tout votre séjour (20 nov → 14 mars)."
+    desc: "Retour centre ~20 min · Tour de l'Horloge, ancienne préfecture en brique rouge, architecture Meiji · parc enneigé",
+    tip: "ℹ️ Pas de sculptures de neige en janvier — le Snow Festival a lieu du 4 au 11 février 2027"
   }, {
     time: "17:00",
     title: "Sapporo White Illumination — Parc Odori ✨",
     map: "Odori Park Sapporo",
-    desc: "Illuminations hivernales sur le parc Odori, l'avenue de la gare, Minami 1-jo et Akapura · allumage en fin d'après-midi quand la nuit tombe (~16h30 en janvier)",
+    desc: "Illuminations hivernales sur le parc Odori, l'avenue de la gare, Minami 1-jo et Akapura · allumage quand la nuit tombe, vers 16h30 en janvier · court du 20 nov au 14 mars",
     tip: null
   }, {
     time: "19:00",
     title: "Mont Moiwa — vue nocturne",
     map: "Mount Moiwa Ropeway Sapporo",
-    desc: "Téléphérique + télésiège · Sapporo illuminée classée parmi les plus beaux panoramas nocturnes du Japon",
-    tip: null
+    desc: "Téléphérique + mini-funiculaire · Sapporo illuminée vue de 531 m, classée parmi les plus beaux panoramas nocturnes du Japon",
+    tip: "→ Tramway depuis le centre jusqu'à Ropeway Iriguchi, puis navette gratuite"
   }]
 }, {
   num: "J14",
