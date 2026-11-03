@@ -680,7 +680,7 @@ const STAGES = [{
   hotel: "Chez Nathan 🏠",
   address: null,
   mapQuery: null,
-  notes: ["Arrivée de Ronan le 25 — Noël à Singapour", "Christmas Wonderland à Gardens by the Bay jusqu'au 1er jan, 18h30-23h", "29 déc soir — Night Safari (19h15-minuit, dernière entrée 23h15)", "26 déc — Fiasco by Juice (Kallang, mer-dim seulement)", "28 déc — Cé La Vi au SkyPark de Marina Bay Sands 🍹", "30 déc soir — NOVA rooftop", "31 déc — Réveillon Marina Bay, se poser avant 20h"]
+  notes: ["Arrivée de Ronan le 25 — Noël à Singapour", "Christmas Wonderland à Gardens by the Bay jusqu'au 1er jan, 18h30-23h", "29 déc — Haw Par Villa et quartier colonial, Night Safari le soir (19h15-minuit)", "26 déc — Fiasco by Juice (Kallang, mer-dim seulement)", "28 déc — Cé La Vi au SkyPark de Marina Bay Sands 🍹", "30 déc soir — NOVA rooftop", "31 déc — Réveillon Marina Bay, se poser avant 20h"]
 }, {
   code: "TPE",
   city: "Taipei",
@@ -985,13 +985,19 @@ const DAYS = [{
     desc: "Anciennes casernes britanniques reconverties en restaurants sous les arbres · 10 min à pied depuis la sortie sud des Botanic Gardens",
     tip: null
   }, {
-    time: "15:00",
+    time: "14:00",
+    title: "Option — Rail Corridor, section Bukit Timah",
+    map: "Bukit Timah Railway Station Singapore",
+    desc: "L'ancienne ligne ferroviaire Singapour-Malaisie reconvertie en corridor vert de 24 km · gare de Bukit Timah restaurée, pont en treillis d'origine, sentier de gravier sous la canopée · juste au nord des Botanic Gardens, ça s'enchaîne bien",
+    tip: "→ Se fait à pied ou à vélo (10 km/h max) · pas d'éclairage, partir avant la tombée de la nuit · section sud Henderson-Spooner fermée pour travaux"
+  }, {
+    time: "16:00",
     title: "Tiong Bahru",
     map: "Tiong Bahru Singapore",
     desc: "Le plus vieux lotissement public de Singapour, architecture art déco des années 1930 · librairies indépendantes, torréfacteurs, fresques murales · Tiong Bahru Market au centre",
     tip: "→ Tiong Bahru Bakery pour les kouign-amann, étonnamment bons"
   }, {
-    time: "19:00",
+    time: "19:30",
     title: "Fiasco by Juice — Kallang 🍷",
     map: "Fiasco by Juice Kallang Singapore",
     desc: "Level M, Kallang Rivergreen Building, 66 Kampong Bugis · européen contemporain et bar à vin, salle tamisée façon salon, places au comptoir face à la cuisine · tartare de bœuf fumé, vivaneau japonais maturé, steak frites, glace au popcorn",
@@ -1018,102 +1024,103 @@ const DAYS = [{
     tip: null
   }, {
     time: "14:00",
-    title: "Intan — musée peranakan privé",
-    map: "The Intan Singapore",
-    desc: "Maison-musée d'un collectionneur, visite sur rendez-vous uniquement · l'une des plus belles collections peranakan de la ville, racontée par son propriétaire",
-    tip: "→ À réserver à l'avance par mail · sinon le Peranakan Museum en ville"
-  }, {
-    time: "16:00",
     title: "East Coast Park — vélo au bord de mer",
     map: "East Coast Park Singapore",
-    desc: "15 km de littoral, location de vélos sur place · barbecues, cargos à l'horizon, Singapour côté local le week-end",
-    tip: "→ Jumbo Seafood ou Long Beach pour le chili crab face à la mer en fin de journée"
+    desc: "20 min à pied ou en bus depuis Katong · 15 km de littoral plat, location de vélos sur place ~S$10/h · barbecues de familles, cargos à l'horizon, le Singapour du dimanche",
+    tip: "→ La piste va jusqu'à Changi si vous avez les jambes · sinon un aller-retour tranquille suffit largement"
+  }, {
+    time: "16:30",
+    title: "Glace & pause — Birds of Paradise",
+    map: "Birds of Paradise Gelato East Coast Singapore",
+    desc: "Glacier botanique singapourien installé dans le parc · parfums à base de plantes et d'épices : pandan, basilic thaï, jasmin blanc, figue de barbarie · rien à voir avec une glace industrielle",
+    tip: "→ Le pandan est le parfum signature, à goûter au moins une fois"
   }, {
     time: "19:00",
-    title: "Chili crab — East Coast Seafood Centre",
-    map: "East Coast Seafood Centre Singapore",
-    desc: "Le plat national, à manger avec les doigts et des mantou frits pour saucer · prévoir un bavoir, c'est sérieux",
-    tip: null
+    title: "Guan Hoe Soon — peranakan depuis 1953",
+    map: "Guan Hoe Soon Joo Chiat Singapore",
+    desc: "40 Joo Chiat Place · le plus ancien restaurant peranakan de Singapour, toujours tenu par la même famille · ayam buah keluak, babi pongteh, itek tim · plats autour de S$15-25, bien meilleur rapport que les usines à chili crab",
+    tip: "→ Fermé le mardi · réserver le week-end"
   }]
 }, {
   num: "J4",
   iso: "2026-12-28",
   city: "SIN",
-  title: "Sentosa — câble car, plages & Fort Siloso",
+  title: "Sentosa en matinée · Marina Bay & Cé La Vi",
   dateLabel: "28 déc",
   transports: ["🚠 Câble car depuis Mount Faber ou HarbourFront · ~S$35 A/R · ou Sentosa Express depuis VivoCity ~S$4"],
   slots: [{
-    time: "09:30",
+    time: "09:00",
     title: "Câble car Mount Faber → Sentosa",
     map: "Mount Faber Cable Car Station Singapore",
-    desc: "La plus belle arrivée sur l'île · vue sur le port, l'un des plus actifs du monde, et sur les détroits · bien mieux que le monorail",
+    desc: "La plus belle arrivée sur l'île · vue sur le port, l'un des plus actifs du monde, et sur les détroits",
     tip: "→ Ligne Mount Faber plutôt que Sentosa Line pour la vue sur le port"
   }, {
-    time: "10:30",
-    title: "Fort Siloso",
+    time: "10:00",
+    title: "Fort Siloso & Skywalk",
     map: "Fort Siloso Singapore",
-    desc: "Seul fort côtier préservé de Singapour · batteries britanniques, tunnels, et le Skywalk à 11 étages qui traverse la canopée · entrée libre",
-    tip: "→ Le Skywalk donne une vue dégagée sur le détroit, gratuit lui aussi"
+    desc: "Seul fort côtier préservé de Singapour · batteries britanniques, tunnels, et le Skywalk à 11 étages qui traverse la canopée · entrée libre, les deux",
+    tip: "→ C'est ce qui a le plus d'intérêt sur l'île · compter 1h30"
   }, {
-    time: "12:30",
-    title: "Déjeuner — Palawan ou Tanjong Beach",
+    time: "12:00",
+    title: "Déjeuner plage · Palawan ou Tanjong",
     map: "Tanjong Beach Club Singapore",
-    desc: "Tanjong Beach Club pour l'ambiance balnéaire chic, ou les stands plus simples de Palawan · Palawan Beach a le pont suspendu vers le point le plus méridional d'Asie continentale",
+    desc: "Tanjong Beach Club pour l'ambiance balnéaire, ou les stands plus simples de Palawan · le pont suspendu de Palawan mène au point le plus méridional d'Asie continentale",
     tip: null
   }, {
-    time: "14:30",
-    title: "Plages & détente",
-    map: "Palawan Beach Sentosa Singapore",
-    desc: "Siloso pour l'animation et les sports de plage, Tanjong pour le calme · l'eau est à 29°C toute l'année",
-    tip: "→ Option si vous préférez l'action : luge Skyline sur deux pistes, ou tyrolienne Mega Adventure"
-  }, {
-    time: "18:30",
-    title: "Retour · dîner côté ville",
+    time: "14:00",
+    title: "Retour ville · temps libre",
     map: "VivoCity Singapore",
-    desc: "Food court du dernier étage de VivoCity avec terrasse sur la baie, ou retour vers Marina Bay pour dîner avant le rooftop",
-    tip: null
+    desc: "Câble car ou Sentosa Express jusqu'à HarbourFront · après-midi au calme à l'appartement, ou shopping à VivoCity",
+    tip: "→ Sentosa se fait très bien en une matinée, inutile d'y traîner l'après-midi"
   }, {
-    time: "21:00",
-    title: "Cé La Vi — SkyPark Marina Bay Sands 🍹",
+    time: "17:30",
+    title: "ArtScience Museum — optionnel",
+    map: "ArtScience Museum Singapore",
+    desc: "Le bâtiment en forme de fleur de lotus au pied de Marina Bay Sands · expositions à l'intersection art, science et technologie · ouvert jusqu'à 19h",
+    tip: "→ Pile à côté du rooftop de ce soir, si l'envie est là"
+  }, {
+    time: "20:00",
+    title: "Dîner Marina Bay · puis Cé La Vi 🍹",
     map: "CE LA VI Marina Bay Sands Singapore",
-    desc: "57e étage du SkyPark, au sommet de Marina Bay Sands · la vue la plus spectaculaire sur la skyline et les Supertrees · HarbourFront → Bayfront ~15 min en MRT",
+    desc: "Dîner autour de Marina Bay, puis Cé La Vi au 57e étage du SkyPark · la vue la plus spectaculaire sur la skyline et les Supertrees illuminés",
     tip: "→ Cover charge en soirée, souvent déductible des consommations · tenue correcte exigée, pas de tongs ni short de plage"
   }]
 }, {
   num: "J5",
   iso: "2026-12-29",
   city: "SIN",
-  title: "Pulau Ubin à vélo · Night Safari",
+  title: "Haw Par Villa · Quartier colonial · Night Safari",
   dateLabel: "29 déc",
-  transports: ["⛴️ Bumboat Changi Point → Pulau Ubin · ~10 min · S$4 par personne · pas d'horaire, le bateau part quand 12 passagers sont réunis"],
+  transports: [],
   slots: [{
-    time: "09:00",
-    title: "⛴️ Changi Point → Pulau Ubin",
-    map: "Changi Point Ferry Terminal Singapore",
-    desc: "Petit bateau en bois depuis Changi Village · l'île est le dernier morceau du Singapour d'avant, 38 villageois, pas de voitures · dépaysement total à 20 min du centre",
-    tip: "→ Le bateau part quand il est plein (12 personnes) · le matin ça va vite"
+    time: "09:30",
+    title: "Haw Par Villa",
+    map: "Haw Par Villa Singapore",
+    desc: "MRT station dédiée sur la ligne Circle · parc de 1 000 statues construit en 1937 par les frères Aw, inventeurs du Baume du Tigre · scènes de mythologie chinoise en béton peint, kitsch et dérangeant à la fois",
+    tip: "→ Les Dix Cours de l'Enfer sont le clou du spectacle : dioramas de châtiments, très explicites · entrée libre"
   }, {
-    time: "09:45",
-    title: "Location de vélo · tour de l'île",
-    map: "Pulau Ubin Singapore",
-    desc: "Vélos à louer au débarcadère, ~S$10-15 la journée · routes de terre, forêt secondaire, anciennes carrières de granit remplies d'eau turquoise",
-    tip: "→ Prendre de l'eau au village, il n'y a presque rien sur l'île"
-  }, {
-    time: "11:00",
-    title: "Chek Jawa Wetlands",
-    map: "Chek Jawa Wetlands Pulau Ubin",
-    desc: "Six écosystèmes côtiers sur un seul site · passerelle sur la mangrove, tour d'observation de 20 m · calaos, sangliers sauvages et macaques en liberté",
-    tip: "→ Vérifier les marées : à marée basse on voit la vie des récifs"
-  }, {
-    time: "13:30",
-    title: "Déjeuner village · retour Changi",
-    map: "Changi Village Hawker Centre",
-    desc: "Petit resto de fruits de mer au village d'Ubin, ou retour à Changi Village pour le nasi lemak du hawker centre, une institution",
+    time: "11:30",
+    title: "Déjeuner · direction le centre",
+    map: "Tanjong Pagar Singapore",
+    desc: "Retour vers le centre en MRT ~20 min · Maxwell ou Amoy Street Food Centre pour déjeuner",
     tip: null
   }, {
-    time: "16:00",
-    title: "Retour · repos avant la soirée",
-    desc: "Changi → centre ~40 min · douche et pause avant le Night Safari",
+    time: "13:30",
+    title: "National Gallery Singapore",
+    map: "National Gallery Singapore",
+    desc: "Ancienne Cour suprême et ancien hôtel de ville réunis par une verrière · la plus grande collection d'art d'Asie du Sud-Est au monde · les anciennes salles d'audience et la cellule des détenus se visitent",
+    tip: "→ Le rooftop du 6e étage donne sur le Padang et Marina Bay, accès libre"
+  }, {
+    time: "15:30",
+    title: "Raffles Hotel · Singapore Sling",
+    map: "Raffles Hotel Singapore",
+    desc: "Palace colonial de 1887 · le Long Bar est l'endroit où le Singapore Sling a été inventé vers 1915 · on jette les coques de cacahuètes par terre, seul endroit de Singapour où c'est toléré",
+    tip: "→ Le cocktail est à ~S$39, c'est le prix du folklore · sinon la cour et l'arcade se visitent librement"
+  }, {
+    time: "16:45",
+    title: "Fort Canning Park",
+    map: "Fort Canning Park Singapore",
+    desc: "Colline historique au cœur de la ville · l'escalier en spirale du Tree Tunnel est le spot photo de Singapour · bunker du Battle Box où la reddition de 1942 a été décidée",
     tip: null
   }, {
     time: "19:15",
