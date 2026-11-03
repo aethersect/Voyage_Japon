@@ -699,7 +699,7 @@ const STAGES = [{
   hotel: "Hotel Mystays Premier Akasaka",
   address: "2-17-54 Akasaka, Minato-ku, Tokyo 107-0052",
   mapQuery: "Hotel Mystays Premier Akasaka Tokyo",
-  booking: "Booking ID 2031952302 · Superior Twin · check-in 15h",
+  booking: "Superior Twin · check-in 15h",
   notes: ["Arrivée 00h50 le 4 jan → Uber depuis Haneda T3 (~¥9 000 / 2) · coucher vers 3h, le 4 démarre à 11h", "teamLab à réserver sur teamlab.art — 4 jan après-midi", "4 jan soir — Mori Art Museum + Tokyo City View", "5 jan — Tsukiji le matin (fermé jusqu'au 4 pour le Nouvel An), New York Bar et Golden Gai le soir", "Check-out le 6 au matin — départ 7h30 pour Hakone"]
 }, {
   code: "HKN",
@@ -730,7 +730,7 @@ const STAGES = [{
   address: "Atsubetsu-ku, Sapporo (à côté de Shin-Sapporo Station)",
   mapQuery: "Hotel Emisia Sapporo",
   booking: "5★ · 469 SGD · annulable avant 2 jan",
-  notes: ["💡 JR Rapid Airport s'arrête à Shin-Sapporo — pas besoin de repasser par Sapporo Station depuis CTS", "Otaru + Noboribetsu : billets JR Hokkaido sur place", "Hoheikyo Onsen — tattoo OK partout, bus 40 min", "ℹ️ Snow Festival (4-11 fév) et lanternes d'Otaru (février) hors saison — mais White Illumination au parc Odori tout votre séjour", "Brasserie Sapporo + jingisukan au Beer Garden : le 10 à 11h (le musée n'ouvre pas avant)"]
+  notes: ["💡 JR Rapid Airport s'arrête à Shin-Sapporo — pas besoin de repasser par Sapporo Station depuis CTS", "Otaru + Noboribetsu : billets JR Hokkaido sur place", "Hoheikyo Onsen — tattoo OK partout · ouvre à 10h · Kappa Liner 70 min, à réserver avant 17h la veille", "ℹ️ Snow Festival (4-11 fév) et lanternes d'Otaru (février) hors saison · White Illumination : parc Odori fermé dès le 26 déc, mais Ekimae-dori (→11 fév) et Minami 1-jo (→14 mars) sont allumés", "Brasserie Sapporo + jingisukan au Beer Garden : le 10 à 11h (le musée n'ouvre pas avant)"]
 }, {
   code: "KYO",
   city: "Kyoto",
@@ -758,7 +758,6 @@ const TRANSPORTS = [{
   date: "Ven 1 jan",
   title: "Singapour → Taipei",
   color: CITY_COLORS.TPE,
-  ref: "D7QYWS",
   carrier: "Scoot",
   dep: "12:30",
   depPlace: "SIN Changi T1",
@@ -771,7 +770,6 @@ const TRANSPORTS = [{
   date: "Dim 3 jan",
   title: "Taipei → Tokyo Haneda",
   color: CITY_COLORS.TYO,
-  ref: "7YXBYX",
   carrier: "Peach",
   dep: "20:55",
   depPlace: "TPE Taoyuan",
@@ -798,7 +796,6 @@ const TRANSPORTS = [{
   date: "Sam 9 jan",
   title: "Yudanaka → Narita → Sapporo",
   color: CITY_COLORS.SPK,
-  ref: "RENJ7D",
   carrier: "Peach",
   dep: "16:50",
   depPlace: "Narita T1",
@@ -811,7 +808,6 @@ const TRANSPORTS = [{
   date: "Mer 13 jan",
   title: "Sapporo → Kyoto",
   color: CITY_COLORS.KYO,
-  ref: "HTV6XH",
   carrier: "Jetstar GK156",
   dep: "17:50",
   depPlace: "CTS Sapporo",
@@ -824,14 +820,13 @@ const TRANSPORTS = [{
   date: "Sam 16 jan",
   title: "Kyoto → Nara → Osaka",
   color: CITY_COLORS.OSA,
-  steps: ["Kyoto → Kintetsu-Nara · Kintetsu Railway · ~35 min · ~¥760", "Nara → Osaka-Namba · Kintetsu · ~40 min · ~¥680", "Namba → Kitahama · métro Sakaisuji (via Nippombashi) · ~10 min — check-in Brighton City"]
+  steps: ["Emporter les valises dès le départ de Kyoto — on ne repasse pas par là", "Kyoto → Kintetsu-Nara · Kintetsu Railway · ~45 min · ~¥760", "Déposer les bagages dans les casiers de Kintetsu-Nara Station (grands formats disponibles)", "Nara → Osaka-Namba · Kintetsu · ~40 min · ~¥680", "Namba → Kitahama · métro Sakaisuji (via Nippombashi) · ~10 min — check-in Brighton City"]
 }, {
   id: "f5",
   type: "combo",
   date: "Dim 17 jan",
   title: "Osaka → Singapour",
   color: CITY_COLORS.SIN,
-  ref: "PUGXNK",
   carrier: "Peach",
   dep: "18:40",
   depPlace: "KIX T1",
@@ -1222,7 +1217,7 @@ const DAYS = [{
   city: "TPE",
   title: "Arrivée Taipei · Dadaocheng · Temple Longshan · Night Market",
   dateLabel: "1er jan",
-  transports: ["✈️ Scoot D7QYWS · SIN T1 → Taipei TPE T1 · 12h30 → 17h05 · EasyCard à acheter à l'aéroport · MRT depuis TPE ~40 min"],
+  transports: ["✈️ Scoot · SIN T1 → Taipei TPE T1 · 12h30 → 17h05 · EasyCard à acheter à l'aéroport · MRT depuis TPE ~40 min"],
   slots: [{
     time: "08:30",
     title: "⏱️ Départ appartement · direction Changi",
@@ -1231,7 +1226,7 @@ const DAYS = [{
     tip: "→ Réveillon la veille — prévoir large, le MRT est calme le 1er janvier matin"
   }, {
     time: "09:45",
-    title: "✈️ Enregistrement Changi T1 · Scoot D7QYWS",
+    title: "✈️ Enregistrement Changi T1 · Scoot",
     map: "Changi Airport Terminal 1 Singapore",
     desc: "Comptoir Scoot Terminal 1 · 20 kg de soute inclus pour 2 passagers · LCC donc arriver ~2h45 avant · vol 12h30 → 17h05 · ~4h45 de vol",
     tip: "⚠️ Scoot = LCC · enregistrement bagages ferme 60 min avant le départ"
@@ -1291,10 +1286,10 @@ const DAYS = [{
     tip: "→ Partir avant 13h, après c'est saturé de cars"
   }, {
     time: "15:00",
-    title: "Musée National du Palais",
-    map: "National Palace Museum Taipei",
-    desc: "La plus grande collection d'art chinois au monde, 700 000 pièces · le chou de jadéite et la pierre en forme de viande sont les stars · MRT Shilin puis bus, ~30 min du centre",
-    tip: "→ Alternative si vous préférez la ville : Dadaocheng et Dihua Street, quartier marchand historique"
+    title: "Pause café · Zhongshan ou Da'an",
+    map: "Zhongshan District Taipei",
+    desc: "Retour tranquille après Jiufen · quartiers de cafés et de boutiques, Taipei vit beaucoup par ses cafés · récupérer des forces avant la montée",
+    tip: "ℹ️ Le Musée National du Palais a été retiré d'ici : il est à 30 min au nord et ne tient pas avant le coucher du soleil à Elephant Mountain. À caser une autre fois si l'envie est là."
   }, {
     time: "17:00",
     title: "Elephant Mountain (Xiangshan)",
@@ -1320,7 +1315,7 @@ const DAYS = [{
   city: "TYO",
   title: "Dernière journée Taipei · Départ Tokyo",
   dateLabel: "3 jan → 4 jan",
-  transports: ["✈️ Peach 7YXBYX · TPE → HND · 20h55 → 00h50 · Uber ou taxi depuis HND · ~¥9 000 pour 2 · Suica card le lendemain matin à l'aéroport"],
+  transports: ["✈️ Peach · TPE → HND · 20h55 → 00h50 · Uber ou taxi depuis HND · ~¥9 000 pour 2 · Suica card le lendemain matin à l'aéroport"],
   slots: [{
     time: "09:00",
     title: "Check-out · bagages en consigne hôtel",
@@ -1352,7 +1347,7 @@ const DAYS = [{
     tip: "→ Astuce : check-in bagages possible directement à Taipei Main Station (in-town check-in) pour certaines compagnies"
   }, {
     time: "18:10",
-    title: "✈️ Enregistrement TPE · Peach 7YXBYX",
+    title: "✈️ Enregistrement TPE · Peach",
     map: "Taoyuan International Airport Terminal 1",
     desc: "Être au comptoir Peach ~2h45 avant · vol 20h55 → 00h50 (+1) · ~3h de vol · LCC donc enregistrement ferme tôt",
     tip: "⚠️ Peach = LCC · comptoir bagages ferme 50 min avant le départ"
@@ -1464,13 +1459,13 @@ const DAYS = [{
     desc: "Train panoramique, siège réservé · acheter le Hakone Free Pass au guichet Odakyu avant de monter (couvre Tozan, téléphérique, bateau, bus) · arrivée Hakone-Yumoto ~10h05",
     tip: "→ Réserver le Romancecar en ligne quelques jours avant sur le site Odakyu"
   }, {
-    time: "10:15",
+    time: "11:00",
     title: "Dépose bagages Hakone Yutowa · Gora",
     map: "Hakone Yutowa",
     desc: "Hakone Tozan Train Hakone-Yumoto → Gora ~40 min (train de montagne à crémaillère, lent et sinueux) · laisser les valises à l'hôtel avant la boucle",
     tip: null
   }, {
-    time: "11:30",
+    time: "11:45",
     title: "Owakudani — zone volcanique",
     map: "Owakudani Hakone",
     desc: "Funiculaire Gora → Sounzan puis téléphérique → Owakudani · fumerolles, cratères, œufs noirs cuits dans les sources sulfureuses · vue sur le Fuji si le ciel est dégagé",
@@ -1514,16 +1509,16 @@ const DAYS = [{
     tip: "→ Le Tozan est lent et sinueux · ne pas sous-estimer les 50 min"
   }, {
     time: "10:45",
-    title: "🚄 Odawara → Nagano · Shinkansen · ~1h40",
+    title: "🚄 Odawara → Nagano · Shinkansen · ~2h20",
     map: "Odawara Station",
-    desc: "Via Tokyo Station (changement Tokaido → Hokuriku Shinkansen Asama) · ~¥7 000/pers billet unitaire · prévoir 15 min de correspondance à Tokyo",
-    tip: "→ Acheter les billets la veille au guichet JR pour éviter la queue du matin"
+    desc: "Odawara → Tokyo en Tokaido Shinkansen (~35 min), correspondance ~15 min, puis Tokyo → Nagano en Hokuriku Shinkansen (~1h30) · ~¥10 000/pers au total · arrivée Nagano vers 13h05",
+    tip: "→ Acheter les deux billets la veille au guichet JR · le Nozomi ne s'arrête pas à Odawara"
   }, {
-    time: "12:30",
-    title: "Déjeuner Nagano · soba + Zenko-ji si le temps",
-    map: "Zenko-ji Temple Nagano",
-    desc: "Nagano est réputée pour ses soba · le temple Zenko-ji est à 20 min à pied ou 10 min en bus de la gare",
-    tip: "→ Zenko-ji peut aussi se faire demain matin — pas de stress si le train a du retard"
+    time: "13:15",
+    title: "Déjeuner Nagano — soba de Shinshu",
+    map: "Nagano Station",
+    desc: "Nagano est la capitale du soba · plusieurs bonnes adresses dans et autour de la gare",
+    tip: "ℹ️ Zenko-ji n'est plus garanti aujourd'hui vu l'heure d'arrivée — il est prévu demain après-midi en option"
   }, {
     time: "14:30",
     title: "🚃 Nagano → Yudanaka · Nagaden · ~45 min",
@@ -1551,10 +1546,10 @@ const DAYS = [{
     desc: "Bus depuis la gare de Yudanaka (~10 min) jusqu'au parking, puis 30-45 min de marche en forêt enneigée selon l'état du sentier",
     tip: "→ Crampons ou chaussures imperméables indispensables — sentier glacé et en pente"
   }, {
-    time: "09:00",
-    title: "🐒 Jigokudani Monkey Park — à l'ouverture",
+    time: "09:30",
+    title: "🐒 Jigokudani Monkey Park",
     map: "Jigokudani Monkey Park Yamanouchi",
-    desc: "Ouverture à 9h · les macaques se baignent surtout le matin quand il fait le plus froid · compter 1h30-2h sur place pour en profiter sans courir",
+    desc: "Arrivée réaliste vers 9h30 : bus à 8h30 puis 30-45 min de marche selon l'état du sentier · les macaques se baignent surtout le matin quand il fait le plus froid · compter 1h30-2h sur place",
     tip: "✓ Journée entière disponible — c'est tout l'intérêt de les voir le 8 plutôt que le 9, jour de transit"
   }, {
     time: "12:00",
@@ -1593,7 +1588,7 @@ const DAYS = [{
   city: "YDK",
   title: "Transit Yudanaka → Narita → Sapporo",
   dateLabel: "9 jan",
-  transports: ["✈️ Peach RENJ7D · NARITA Terminal 1 → CTS Sapporo · 16h50 → 18h40 · 🚄 Route optimale : descendre du Shinkansen à UENO (pas Tokyo Station) puis Keisei Skyliner direct → Narita T1 · 53 min · ~¥2 580"],
+  transports: ["✈️ Peach · NARITA Terminal 1 → CTS Sapporo · 16h50 → 18h40 · 🚄 Route optimale : descendre du Shinkansen à UENO (pas Tokyo Station) puis Keisei Skyliner direct → Narita T1 · 53 min · ~¥2 580"],
   slots: [{
     time: "08:00",
     title: "Petit-déjeuner · check-out tranquille",
@@ -1626,7 +1621,7 @@ const DAYS = [{
     tip: "→ Nettement plus rapide et moins cher que de continuer jusqu'à Tokyo Station pour prendre le Narita Express"
   }, {
     time: "15:00",
-    title: "✈️ Enregistrement Narita T1 · Peach RENJ7D",
+    title: "✈️ Enregistrement Narita T1 · Peach",
     map: "Narita Airport Terminal 1",
     desc: "Peach est au Terminal 1 à Narita · dépôt bagages au comptoir fermé 30 min avant le départ (16h20) · passage sécurité au plus tard 25 min avant · vol 16h50 → 18h40",
     tip: "→ Check-in en ligne sur l'appli Peach dès 14h50 pour ne garder que le dépôt bagages"
@@ -1679,13 +1674,13 @@ const DAYS = [{
     title: "Parc Odori & vieille ville",
     map: "Odori Park Sapporo",
     desc: "Retour centre ~20 min · Tour de l'Horloge, ancienne préfecture en brique rouge, architecture Meiji · parc enneigé",
-    tip: "ℹ️ Pas de sculptures de neige en janvier — le Snow Festival a lieu du 4 au 11 février 2027"
+    tip: "ℹ️ Pas de sculptures de neige en janvier (Snow Festival : 4-11 février) et les illuminations du parc Odori s'arrêtent le 25 décembre — celles d'Ekimae-dori et Minami 1-jo prennent le relais ce soir"
   }, {
     time: "17:00",
-    title: "Sapporo White Illumination — Parc Odori ✨",
-    map: "Odori Park Sapporo",
-    desc: "Illuminations hivernales sur le parc Odori, l'avenue de la gare, Minami 1-jo et Akapura · allumage quand la nuit tombe, vers 16h30 en janvier · court du 20 nov au 14 mars",
-    tip: null
+    title: "White Illumination — Ekimae-dori & Minami 1-jo ✨",
+    map: "Sapporo Ekimae-dori Illumination",
+    desc: "Allumage vers 16h30 en janvier · l'avenue de la gare (jusqu'au 11 fév) et Minami 1-jo (jusqu'au 14 mars) · le parc Nakajima s'illumine aussi courant janvier",
+    tip: "ℹ️ Le site du parc Odori, lui, s'arrête le 25 décembre — c'est pourquoi la promenade est déplacée sur ces deux avenues"
   }, {
     time: "19:00",
     title: "Mont Moiwa — vue nocturne",
@@ -1772,8 +1767,8 @@ const DAYS = [{
     time: "11:30",
     title: "♨️ Bain de pieds naturel — rivière Oyunuma",
     map: "Oyunuma River Natural Footbath Noboribetsu",
-    desc: "10 min de plus le long du sentier · la rivière qui s'écoule du lac est naturellement chaude, 40-50°C · bancs en bois sur la berge, on trempe les pieds en pleine forêt enneigée",
-    tip: "✓ Gratuit, en plein air, pieds uniquement — aucune question de tatouages ici. Prévoir une petite serviette."
+    desc: "10 min de plus le long du sentier · la rivière qui s'écoule du lac est naturellement chaude, 40-50°C · bancs en bois sur la berge, pieds dans l'eau en pleine forêt enneigée · gratuit, pieds uniquement, aucune question de tatouages",
+    tip: "⚠️ Le sentier d'accès peut être fermé en hiver (le parking l'est systématiquement). À vérifier le matin même auprès de l'office de tourisme de Noboribetsu : 0143-84-3311. Si c'est fermé, l'onsen de l'après-midi compense."
   }, {
     time: "12:45",
     title: "Déjeuner — village thermal",
@@ -1812,23 +1807,29 @@ const DAYS = [{
     desc: "Laisser les valises à l'hôtel — on repasse pas, mais Shin-Sapporo est sur le trajet vers CTS · ou consigne à Sapporo Station",
     tip: "→ Vérifier que l'hôtel garde les bagages après check-out (généralement oui)"
   }, {
-    time: "09:30",
-    title: "♨️ Hoheikyo Onsen · bus ~40 min",
+    time: "09:10",
+    title: "🚌 Kappa Liner — Sapporo Station → Hoheikyo",
+    map: "Sapporo Station Bus Terminal",
+    desc: "Quai 27 de JR Sapporo Station, arrêts aussi à Odori et Susukino · ~70 min sans correspondance · ¥1 700 (¥1 460 en réservant en ligne) · arrivée ~10h30",
+    tip: "⚠️ Réservation obligatoire avant 17h la veille · sans réservation, embarquement seulement s'il reste des places"
+  }, {
+    time: "10:30",
+    title: "♨️ Hoheikyo Onsen",
     map: "Hoheikyo Onsen Sapporo",
-    desc: "Rotenburo dans les gorges enneigées · tatouages acceptés partout, vérifié · bain à -10°C dehors, vapeur et neige · prévoir 1h30 sur place",
-    tip: "→ Restaurant curry indien sur place, étonnamment excellent"
+    desc: "Ouvre à 10h · rotenburo dans les gorges enneigées, bain à -10°C dehors, vapeur et neige · tatouages acceptés partout · ¥1 300 l'entrée · ~1h30 sur place",
+    tip: "→ Restaurant curry indien sur place, étonnamment excellent — déjeuner réglé avant le bus retour"
   }, {
-    time: "12:30",
-    title: "Retour Sapporo · déjeuner",
+    time: "12:15",
+    title: "🚌 Bus retour · arrivée Sapporo ~13h35",
     map: "Sapporo Station",
-    desc: "Bus retour ~40 min · soup curry ou dernier crabe pour clore Hokkaido · autour de Sapporo Station pour rester proche du train aéroport",
-    tip: "ℹ️ La brasserie Sapporo (visite + dégustation, ~1h30) ne tient pas en plus d'Hoheikyo un jour de vol. À faire le 10 ou le 12 si elle vous tient à cœur."
+    desc: "Fixer ce retour à l'avance, c'est le créneau qui conditionne tout le reste de la journée",
+    tip: "ℹ️ Journée volontairement limitée à Hoheikyo : avec 70 min de bus dans chaque sens et un vol à 17h50, rien d'autre ne tient"
   }, {
-    time: "15:00",
+    time: "14:15",
     title: "⏱️ Récupérer bagages · Shin-Sapporo → CTS · ~28 min",
     map: "New Chitose Airport Hokkaido",
-    desc: "JR Rapid Airport depuis Shin-Sapporo · ~¥1 200 · viser l'aéroport pour 16h15",
-    tip: "→ Trains toutes les 15 min · le Rapid Airport est direct"
+    desc: "Sapporo Station → Shin-Sapporo ~12 min, récupération des valises à l'Emisia, puis JR Rapid Airport · ~¥1 200 · viser l'aéroport pour 16h00",
+    tip: "→ Trains toutes les 15 min · le Rapid Airport est direct depuis Shin-Sapporo"
   }, {
     time: "16:15",
     title: "✈️ Enregistrement CTS · Jetstar GK156",
@@ -1933,10 +1934,10 @@ const DAYS = [{
   transports: ["🚃 Kyoto → Kintetsu-Nara · Kintetsu Railway · ~45 min · ~¥760 (non JR) · puis Nara → Osaka-Namba · Kintetsu · ~40 min · ~¥680"],
   slots: [{
     time: "08:00",
-    title: "Check-out Intergate · bagages en consigne",
+    title: "Check-out Intergate · on emporte les valises",
     map: "Hotel Intergate Kyoto Shijo Shinmachi",
-    desc: "Laisser les valises à l'hôtel ou en coin locker à Kyoto Station · on les récupère en début d'après-midi avant Osaka",
-    tip: "→ Voyager léger pour Nara — les cerfs fouillent les sacs 🦌"
+    desc: "Les valises partent avec vous jusqu'à Nara, où elles iront en consigne · on ne repasse pas par Kyoto aujourd'hui",
+    tip: "✓ Évite un aller-retour inutile : Nara est sur la route de Kyoto vers Osaka"
   }, {
     time: "09:00",
     title: "🚃 Kyoto → Nara · Kintetsu · ~45 min",
@@ -1944,17 +1945,23 @@ const DAYS = [{
     desc: "Quai Kintetsu de Kyoto Station · ~¥760 · Kintetsu-Nara arrive en plein centre, 5 min à pied du parc aux cerfs (la gare JR est plus loin)",
     tip: null
   }, {
-    time: "10:00",
+    time: "09:50",
+    title: "Consigne à Kintetsu-Nara Station",
+    map: "Kintetsu Nara Station",
+    desc: "Casiers à bagages dans la gare, y compris grands et très grands formats · déposer les valises avant de rejoindre le parc, à 5 min à pied",
+    tip: "→ Arriver tôt : les grands casiers partent vite en journée"
+  }, {
+    time: "10:15",
     title: "🦌 Nara — cerfs & Todai-ji",
     map: "Todai-ji Nara Park",
     desc: "1 200 cerfs sika en liberté dans le parc · biscuits shika-senbei ~¥200 · Todai-ji abrite le plus grand Bouddha de bronze du Japon · sanctuaire Kasuga Taisha et ses lanternes si le temps le permet",
     tip: "→ Les cerfs s'inclinent pour réclamer un biscuit · ranger plans et tickets, ils mangent le papier"
   }, {
     time: "13:30",
-    title: "🚃 Nara → Osaka-Namba · Kintetsu · ~40 min",
+    title: "🚃 Récupérer les valises · Nara → Osaka-Namba · ~40 min",
     map: "Osaka Namba Station",
-    desc: "~¥680 · détour par Kyoto pour récupérer les bagages si laissés à l'hôtel, sinon direct depuis Nara avec les valises",
-    tip: "→ Plus simple : coin lockers à Kyoto Station le matin, récupération en passant"
+    desc: "Reprendre les bagages à la consigne puis Kintetsu direct jusqu'à Osaka-Namba · ~¥680 · aucun détour par Kyoto",
+    tip: null
   }, {
     time: "15:30",
     title: "Check-in Brighton City Kitahama",
@@ -1980,7 +1987,7 @@ const DAYS = [{
   city: "OSA",
   title: "Château d'Osaka · Kuromon · Vol retour Singapour",
   dateLabel: "17 jan → 18 jan",
-  transports: ["✈️ Peach PUGXNK · KIX T1 → SIN · 18h40 → 00h55+1 · 🚃 Nankai Railway Namba → KIX · ~40 min · ~¥1 430 · ⚠️ Non JR — billet séparé"],
+  transports: ["✈️ Peach · KIX T1 → SIN · 18h40 → 00h55+1 · 🚃 Nankai Railway Namba → KIX · ~40 min · ~¥1 430 · ⚠️ Non JR — billet séparé"],
   slots: [{
     time: "09:00",
     title: "Check-out Brighton City · bagages en consigne",
@@ -2018,7 +2025,7 @@ const DAYS = [{
     tip: null
   }, {
     time: "16:30",
-    title: "✈️ Enregistrement KIX T1 · Peach PUGXNK",
+    title: "✈️ Enregistrement KIX T1 · Peach",
     map: "Kansai International Airport Terminal 1",
     desc: "LCC — être au comptoir à 16h30 · vol 18h40 → 00h55 (+1) · ~7h de vol",
     tip: "⚠️ Peach = LCC · comptoir bagages ferme 50 min avant"
@@ -2667,7 +2674,7 @@ function TicketsTab() {
       marginTop: 8,
       lineHeight: 1.5
     }
-  }, "Captures de billets, QR codes, confirmations. Stockés sur cet appareil, accessibles hors connexion."), meta === null ? /*#__PURE__*/React.createElement("div", {
+  }, "Captures de billets, QR codes, confirmations, références de réservation. Stockés sur cet appareil uniquement, accessibles hors connexion — rien ne part sur le réseau."), meta === null ? /*#__PURE__*/React.createElement("div", {
     style: {
       textAlign: "center",
       color: S.sub,
