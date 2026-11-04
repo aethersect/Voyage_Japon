@@ -680,7 +680,7 @@ const STAGES = [{
   hotel: "Chez Nathan 🏠",
   address: null,
   mapQuery: null,
-  notes: ["Arrivée de Ronan le 25 — Noël à Singapour", "Christmas Wonderland à Gardens by the Bay jusqu'au 1er jan, 18h30-23h", "29 déc — Haw Par Villa et quartier colonial, Night Safari le soir (19h15-minuit)", "26 déc — Fiasco by Juice (Kallang, mer-dim seulement)", "28 déc — Cé La Vi au SkyPark de Marina Bay Sands 🍹", "30 déc soir — NOVA rooftop", "31 déc — Réveillon Marina Bay, se poser avant 20h"]
+  notes: ["Arrivée de Ronan le 25 — Noël à Singapour", "Christmas Wonderland à Gardens by the Bay jusqu'au 1er jan, 18h30-23h", "29 déc — Haw Par Villa et quartier colonial, Little India et Haji Lane le soir", "26 déc — Fiasco by Juice (Kallang, mer-dim seulement)", "28 déc — Cé La Vi au SkyPark de Marina Bay Sands 🍹", "30 déc soir — NOVA rooftop", "31 déc — Réveillon Marina Bay, se poser avant 20h"]
 }, {
   code: "TPE",
   city: "Taipei",
@@ -700,7 +700,7 @@ const STAGES = [{
   address: "2-17-54 Akasaka, Minato-ku, Tokyo 107-0052",
   mapQuery: "Hotel Mystays Premier Akasaka Tokyo",
   booking: "Superior Twin · check-in 15h",
-  notes: ["Arrivée 00h50 le 4 jan → Uber depuis Haneda T3 (~¥9 000 / 2) · coucher vers 3h, le 4 démarre à 11h", "teamLab Planets (Toyosu) à réserver sur teamlab.art — créneau 4 jan 15h", "4 jan soir — Mori Art Museum + Tokyo City View", "5 jan — Tsukiji le matin (fermé jusqu'au 4 pour le Nouvel An), New York Bar et Golden Gai le soir", "Check-out le 6 au matin — départ 7h30 pour Hakone"]
+  notes: ["Arrivée 00h50 le 4 jan → Uber depuis Haneda T3 (~¥9 000 / 2) · coucher vers 3h, le 4 démarre à 11h", "teamLab Planets (Toyosu) à réserver sur teamlab.art — créneau 4 jan 15h", "4 jan soir — Mori Art Museum + Tokyo City View : créneau à réserver (obligatoire pour la vue), combiné ¥4 500 en ligne", "5 jan — Tsukiji le matin (fermé jusqu'au 4 pour le Nouvel An), New York Bar et Golden Gai le soir", "Check-out le 6 au matin — départ 7h30 pour Hakone"]
 }, {
   code: "HKN",
   city: "Hakone",
@@ -922,6 +922,71 @@ const PACKING = [{
     { name: "Sac pliable supplémentaire", detail: "Pour le retour · achats Akihabara et Don Quijote 😅" }
   ]
 }];
+/* ── Ce qu'il reste à réserver, groupé par date d'ouverture ── */
+const RESA = [{
+  when: "Maintenant",
+  label: "Ouvert — et ça se remplit",
+  note: "Tout ce qui est déjà en vente. La semaine du 25 déc au 1er jan est la plus chargée de l'année à Singapour : les tables avec vue partent des semaines à l'avance.",
+  items: [
+    { name: "Mori Art Museum + Tokyo City View — 4 jan", detail: "Billet combiné ¥4 500 en ligne (¥4 900 sur place) · la vue exige une réservation date + créneau à cause de l'expo Petit Prince · ventes du musée déjà ouvertes jusqu'au 28 mars", key: true },
+    { name: "Cé La Vi SkyPark — 28 déc", detail: "57e étage de Marina Bay Sands · demander une table côté Supertrees pour le coucher de soleil" },
+    { name: "NOVA rooftop — 30 déc", detail: "Mercredi soir, veille du réveillon" },
+    { name: "Fiasco by Juice — 26 déc", detail: "Samedi · ouvert mer-dim seulement, service dès midi le samedi" },
+    { name: "Guan Hoe Soon — 27 déc", detail: "Dimanche · peranakan depuis 1953, fermé le mardi donc pas de souci sur cette date" },
+    { name: "Sapporo Beer Garden — 10 jan, 11h", detail: "Jingisukan dans le hall Kaitakushikan · dimanche midi, réservation via TableCheck" },
+    { name: "Réveillon Marina Bay — 31 déc", detail: "Gratuit si vous vous postez au bord de l'eau avant 20h · mais si vous voulez un rooftop ou un resto avec vue sur le feu d'artifice, c'est maintenant ou jamais" }
+  ]
+}, {
+  when: "6 déc · 10h00 JST",
+  label: "11h00 heure de Singapour",
+  note: "Les billets de train japonais s'ouvrent exactement un mois avant, à la minute. Mettez une alarme pour celui-là.",
+  items: [
+    { name: "Romancecar Shinjuku → Hakone-Yumoto — 6 jan", detail: "Départ ~8h40 · sur e-Romancecar · TOUS les sièges sont réservés, il n'existe pas de place debout · ~¥2 600 avec le supplément · non inclus dans le Hakone Free Pass", key: true }
+  ]
+}, {
+  when: "7 déc · 10h00 JST",
+  label: "Confort, pas obligatoire",
+  note: "Ces sièges réservés s'achètent aussi très bien au guichet JR la veille du départ. Réserver un mois avant, c'est juste de l'assurance.",
+  items: [
+    { name: "Shinkansen Asama Odawara → Nagano — 7 jan", detail: "~1h40 · ~¥7 000 à l'unité · ⚠️ le Nozomi ne s'arrête pas à Odawara" }
+  ]
+}, {
+  when: "9 déc · 9h00 et 10h00 JST",
+  label: "Jour du transit vers Sapporo",
+  note: "Journée la plus serrée du voyage : Yudanaka → Narita → Sapporo. Les deux segments valent une réservation.",
+  items: [
+    { name: "Shinkansen Nagano → Ueno — 9 jan (10h00 JST)", detail: "⚠️ Certains Kagayaki ne s'arrêtent pas à Ueno — prendre un Hakutaka ou vérifier l'arrêt en achetant", key: true },
+    { name: "Skyliner Keisei Ueno → Narita — 9 jan (9h00 JST)", detail: "53 min · ¥2 580 · tous les sièges sont réservés, pas de réservation à bord · départs toutes les 20 min" }
+  ]
+}, {
+  when: "12 déc · 10h00 JST",
+  label: "Journée Noboribetsu",
+  items: [
+    { name: "Limited Express Hokuto ou Suzuran Sapporo → Noboribetsu — 12 jan", detail: "Puis bus Donan 15 min jusqu'au terminal de Noboribetsu Onsen · sièges réservés au guichet JR ou en ligne" }
+  ]
+}, {
+  when: "La veille, ou sur place",
+  label: "Rien à faire avant le départ",
+  note: "À ne pas prendre trop tôt : soit ça ne se réserve pas, soit la réservation ouvre la veille.",
+  items: [
+    { name: "Kappa Liner → Hoheikyo Onsen", detail: "⚠️ Réservation OBLIGATOIRE le 12 jan avant 17h pour le bus du 13 · ¥1 460 en ligne contre ¥1 700 sur place · quai 27 de Sapporo Station", key: true },
+    { name: "Hakone Free Pass", detail: "Guichet Odakyu à Shinjuku, le matin du 6 avant de monter dans le Romancecar · couvre Tozan, téléphérique, bateau et bus" },
+    { name: "JR Sapporo → Otaru — 11 jan", detail: "~¥750 · billet au guichet le matin, pas de réservation" },
+    { name: "Atelier soufflage de verre à Otaru — 11 jan", detail: "~45 min · à réserver sur place le matin, en arrivant" },
+    { name: "Kintetsu Kyoto → Nara → Osaka — 16 jan", detail: "Billet sur place · casiers grande taille à Kintetsu-Nara pour les bagages" },
+    { name: "Nankai Namba → KIX — 17 jan", detail: "Airport Express ~¥1 430, ou Rapi:t 38 min ~¥1 970 · guichet Nankai, non JR" },
+    { name: "Suica Cards", detail: "Au réveil du 4 jan · distributeurs dans le métro ou konbini" }
+  ]
+}, {
+  when: "À vérifier",
+  label: "Ce ne sont pas des réservations",
+  items: [
+    { name: "Dîner inclus au Hakone Yutowa ?", detail: "La formule Standard Twin ne l'inclut pas toujours · si non inclus, réserver le restaurant de l'hôtel en arrivant (japonais + buffet, 90 min, boissons free-flow)", key: true },
+    { name: "Navette gratuite Yudanaka → Hotel Omodaka", detail: "1,1 km depuis la gare · à demander à l'avance à l'hôtel, pas automatique" },
+    { name: "teamLab Planets — 4 jan 15h", detail: "✅ Réservé" }
+  ]
+}];
+
 const DAYS = [{
   num: "J1",
   iso: "2026-12-25",
@@ -1084,7 +1149,7 @@ const DAYS = [{
   num: "J5",
   iso: "2026-12-29",
   city: "SIN",
-  title: "Haw Par Villa · Quartier colonial · Night Safari",
+  title: "Haw Par Villa · Quartier colonial · Little India & Haji Lane",
   dateLabel: "29 déc",
   transports: [],
   slots: [{
@@ -1118,11 +1183,17 @@ const DAYS = [{
     desc: "Colline historique au cœur de la ville · l'escalier en spirale du Tree Tunnel est le spot photo de Singapour · bunker du Battle Box où la reddition de 1942 a été décidée",
     tip: null
   }, {
-    time: "19:15",
-    title: "Night Safari 🦏",
-    map: "Night Safari Singapore",
-    desc: "Premier zoo nocturne au monde · tram guidé à travers sept zones géographiques, puis sentiers à pied pour approcher pangolins, loutres et léopards · 2 500 animaux, éclairage calqué sur la pleine lune",
-    tip: "→ Ouvre à 19h15, dernière entrée 23h15 · arriver à l'ouverture pour le tram avant la file · compter 3h"
+    time: "18:00",
+    title: "Little India — Tekka & Serangoon Road",
+    map: "Tekka Centre Little India Singapore",
+    desc: "MRT ~10 min depuis Fort Canning · dîner au Tekka Centre : biryani, roti prata, murtabak, autour de S$6 l'assiette · puis Serangoon Road, le temple Sri Veeramakaliamman illuminé et les boutiques de guirlandes · Mustafa Centre juste à côté, ouvert 24h et parfaitement chaotique",
+    tip: "→ Soirée à ~S$15 par personne, contre S$58 d'entrée pour le Night Safari"
+  }, {
+    time: "20:00",
+    title: "Kampong Glam — Haji Lane & Arab Street 🍻",
+    map: "Haji Lane Singapore",
+    desc: "15 min à pied depuis Little India · la mosquée du Sultan éclairée, Arab Street et ses rouleaux de tissu, puis Haji Lane : street art, boutiques indépendantes et bars minuscules · c'est le soir que la ruelle prend vie",
+    tip: "→ Bussorah Street pour le shisha et le libanais si vous avez encore faim"
   }]
 }, {
   num: "J6",
@@ -1150,11 +1221,17 @@ const DAYS = [{
     desc: "Buddha Tooth Relic Temple et Sri Mariamman (le plus ancien temple hindou de la ville) à 5 min l'un de l'autre · shophouses colorées de Pagoda Street",
     tip: null
   }, {
-    time: "16:00",
-    title: "Little India & Haji Lane",
-    map: "Haji Lane Singapore",
-    desc: "MRT 10 min · Tekka Centre et le quartier indien, puis Haji Lane et Arab Street · street art, boutiques indépendantes, mosquée du Sultan",
-    tip: "→ Haji Lane s'anime en fin d'après-midi quand les bars ouvrent"
+    time: "15:30",
+    title: "Ann Siang Hill & Telok Ayer",
+    map: "Ann Siang Hill Singapore",
+    desc: "5 min à pied depuis Sri Mariamman · shophouses restaurées sur la colline, Club Street dont les bars ouvrent en fin d'après-midi, et le temple Thian Hock Keng, construit sans un seul clou par les premiers migrants Hokkien",
+    tip: "→ Little India et Haji Lane sont passés au 29 au soir — cette journée était intenable autrement"
+  }, {
+    time: "18:00",
+    title: "Dîner — Makansutra Gluttons Bay",
+    map: "Makansutra Gluttons Bay Esplanade Singapore",
+    desc: "Hawker en plein air au bord de l'eau, dans l'annexe de l'Esplanade · satay, chili crab, oyster omelette face à la skyline · ouvert dès 16h · ~20 min à pied jusqu'au Supertree Grove par le Helix Bridge, ou 2 stations de MRT jusqu'à Bayfront",
+    tip: "ℹ️ Satay by the Bay a fermé le 1er oct 2026, remplacé par Wetlands by the Bay · sinon Lau Pa Sat et sa Satay Street (Boon Tat fermée aux voitures dès 19h) font aussi l'affaire"
   }, {
     time: "19:45",
     title: "Garden Rhapsody — Supertree Grove",
@@ -1382,13 +1459,13 @@ const DAYS = [{
     title: "teamLab Planets TOKYO — Toyosu 🎨",
     map: "teamLab Planets TOKYO Toyosu",
     desc: "Musée immersif pieds nus : certaines salles sont inondées (eau jusqu'aux genoux), jardins de fleurs projetées, salles de miroirs infinis · compter ~2h · ouvert 9h-22h · Asakusa → Shin-Toyosu ~35 min (Ginza jusqu'à Ginza, Yurakucho jusqu'à Toyosu, Yurikamome 1 arrêt) · sortie 1A de Shin-Toyosu, 1 min à pied",
-    tip: "→ ~¥4 200 / pers · billets horodatés à réserver sur teamlab.art (ça part vite) · mettre un short ou un pantalon retroussable — shorts prêtés gratuitement sur place · casiers à l'entrée pour chaussures et sacs"
+    tip: "→ ¥3 600-4 200 / pers (tarif dynamique, + cher le week-end) · créneaux horodatés toutes les 30 min, entrée dans les 30 min suivant l'heure du billet, pas de remboursement si en retard · DMM ouvre les nouvelles dates le 1er du mois, ~2 mois à l'avance → viser le 1er déc pour le 4 jan · mettre un short ou un pantalon retroussable, shorts prêtés gratuitement sur place · casiers à l'entrée"
   }, {
     time: "18:00",
     title: "Mori Art Museum + Tokyo City View — Roppongi Hills 🌃",
     map: "Mori Art Museum Roppongi Hills Tokyo",
-    desc: "53e étage de Roppongi Hills · expo art contemporain + vue panoramique à 360° sur Tokyo de nuit · ouvert jusqu'à 22h · Museum Café \"The Sun & The Moon\" avec vue si vous avez faim",
-    tip: "→ ~¥2 000 / pers · Toyosu → Roppongi ~25 min : Yurakucho 1 arrêt jusqu'à Tsukishima puis Oedo directe jusqu'à Roppongi · check l'expo en cours sur mori.art.museum"
+    desc: "53e étage de Roppongi Hills · expo « Mariko Mori : All That Shines » (31 oct → 28 mars) · au 52e, Tokyo City View = vue panoramique 360° sur Tokyo de nuit, qui accueille l'expo « Le Petit Prince » 80 ans (13 nov → 14 fév) · ouvert 10h-22h, dernière entrée 21h30 · Museum Café \"The Sun & The Moon\" avec vue si vous avez faim",
+    tip: "⚠️ Tokyo City View : réservation date + créneau OBLIGATOIRE à cause du Petit Prince · billet combiné musée + vue ¥4 500 en ligne (¥4 900 sur place), valable le 4 jan — PAS du 18 déc au 3 jan · séparément : musée ¥2 600 en ligne, vue ¥2 200 · Toyosu → Roppongi ~25 min : Yurakucho 1 arrêt jusqu'à Tsukishima puis Oedo directe"
   }, {
     time: "21:00",
     title: "Dîner Roppongi · rentrer tôt",
@@ -2568,6 +2645,104 @@ function PackingTab() {
     ))
   );
 }
+/* ── Checklist des réservations restantes, en tête de l'onglet Billets ── */
+function ResaChecklist() {
+  const [checked, setChecked] = useState({});
+  const [open, setOpen] = useState(true);
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem("resa-checked");
+      if (saved) setChecked(JSON.parse(saved));
+    } catch (e) {}
+  }, []);
+  const toggle = key => {
+    const next = Object.assign({}, checked, { [key]: !checked[key] });
+    setChecked(next);
+    try { localStorage.setItem("resa-checked", JSON.stringify(next)); } catch (e) {}
+  };
+  const allItems = RESA.reduce((a, g) => a + g.items.length, 0);
+  const doneCount = Object.values(checked).filter(Boolean).length;
+  const pct = allItems ? Math.round(doneCount / allItems * 100) : 0;
+
+  return /*#__PURE__*/React.createElement("section", { style: { marginBottom: 26 } },
+
+    /* ── En-tête repliable + progression ─────────────── */
+    /*#__PURE__*/React.createElement("div", { className: "card", style: { padding: 17, marginBottom: open ? 16 : 0 } },
+      /*#__PURE__*/React.createElement("div", {
+        onClick: () => setOpen(!open),
+        role: "button",
+        tabIndex: 0,
+        onKeyDown: e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setOpen(!open); } },
+        style: { display: "flex", alignItems: "flex-end", justifyContent: "space-between", marginBottom: 13, cursor: "pointer" }
+      },
+        /*#__PURE__*/React.createElement("div", null,
+          /*#__PURE__*/React.createElement("div", { className: "section-label", style: { marginBottom: 7 } }, "À réserver"),
+          /*#__PURE__*/React.createElement("div", {
+            style: { fontSize: 30, fontWeight: 700, letterSpacing: "-.035em", lineHeight: 1, fontVariantNumeric: "tabular-nums" }
+          }, String(allItems - doneCount), /*#__PURE__*/React.createElement("span", {
+            style: { fontSize: 15, color: S.sub, fontWeight: 600, marginLeft: 7 }
+          }, "en attente")),
+          /*#__PURE__*/React.createElement("div", {
+            style: { fontSize: 11.5, color: S.sub, marginTop: 6, fontVariantNumeric: "tabular-nums" }
+          }, doneCount + " sur " + allItems + " bouclés")
+        ),
+        /*#__PURE__*/React.createElement("span", {
+          style: { fontSize: 11.5, color: S.sub, fontWeight: 600, whiteSpace: "nowrap", paddingBottom: 2 }
+        }, open ? "Masquer" : "Afficher")
+      ),
+      /*#__PURE__*/React.createElement("div", { className: "meter" },
+        /*#__PURE__*/React.createElement("div", { className: "meter-fill", style: { width: pct + "%" } })
+      )
+    ),
+
+    /* ── Groupes par date d'ouverture ────────────────── */
+    open && RESA.map((group, gi) => /*#__PURE__*/React.createElement("div", { key: gi, style: { marginBottom: 22 } },
+      /*#__PURE__*/React.createElement("div", {
+        style: { display: "flex", alignItems: "baseline", gap: 9, flexWrap: "wrap", margin: "0 0 " + (group.note ? "7px" : "12px") }
+      },
+        /*#__PURE__*/React.createElement("h3", {
+          style: { fontSize: 15, fontWeight: 700, letterSpacing: "-.018em", margin: 0 }
+        }, group.when),
+        group.label && /*#__PURE__*/React.createElement("span", {
+          style: { fontSize: 11, color: S.sub2, fontWeight: 500 }
+        }, group.label)
+      ),
+      group.note && /*#__PURE__*/React.createElement("p", {
+        style: { fontSize: 11.5, color: S.sub, lineHeight: 1.6, margin: "0 0 13px" }
+      }, group.note),
+      /*#__PURE__*/React.createElement("div", { style: { display: "flex", flexDirection: "column", gap: 7 } },
+        group.items.map((item, ii) => {
+          const key = gi + "-" + ii;
+          const done = !!checked[key];
+          return /*#__PURE__*/React.createElement("div", {
+            key: key,
+            onClick: () => toggle(key),
+            role: "checkbox",
+            "aria-checked": done,
+            tabIndex: 0,
+            onKeyDown: e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(key); } },
+            className: "pack-row" + (done ? " pack-row--done" : item.key ? " pack-row--key" : "")
+          },
+            /*#__PURE__*/React.createElement("span", { className: "pack-box" }, done ? "✓" : ""),
+            /*#__PURE__*/React.createElement("div", { className: "pack-body", style: { flex: 1 } },
+              /*#__PURE__*/React.createElement("div", {
+                className: "pack-name",
+                style: item.key && !done ? { color: "#8A6427" } : null
+              }, item.name),
+              item.detail && /*#__PURE__*/React.createElement("div", { className: "pack-detail" }, item.detail)
+            )
+          );
+        })
+      )
+    )),
+
+    /* ── Séparateur avant la partie stockage de billets ── */
+    /*#__PURE__*/React.createElement("div", {
+      style: { height: 1, background: S.line, margin: "4px 0 22px" }
+    })
+  );
+}
+
 function TicketsTab() {
   const [meta, setMeta] = useState(null);
   const [images, setImages] = useState({});
@@ -2639,7 +2814,7 @@ function TicketsTab() {
     style: {
       padding: "16px 16px 100px"
     }
-  }, /*#__PURE__*/React.createElement("input", {
+  }, /*#__PURE__*/React.createElement(ResaChecklist, null), /*#__PURE__*/React.createElement("input", {
     ref: fileRef,
     type: "file",
     accept: "image/*",
